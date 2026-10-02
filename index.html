@@ -10,22 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f0f7f7;
-  --paper-2:#e5f2f1;
-  --card:rgba(252,255,255,.78);
-  --ink:#2e5d58;
-  --ink-2:#598580;
-  --ink-3:#8fb5b1;
-  --sky:#bbf3eb;
-  --peri:#a8e1d9;
-  --lilac:#b7ede8;
-  --rose:#c1f1f0;
-  --mauve:#4da59b;
-  --gold:#76c6bd;
-  --gold-2:#b7ebe6;
-  --gold-3:#4da59b;
-  --line:rgba(118,198,189,.28);
-  --shadow:0 24px 50px -24px rgba(69,121,116,.28), 0 6px 16px -10px rgba(69,121,116,.16);
+  --paper:#f0f4f7;
+  --paper-2:#e5edf2;
+  --card:rgba(252,254,255,.78);
+  --ink:#074d72;
+  --ink-2:#0b71a8;
+  --ink-3:#13a3f0;
+  --sky:#8ad2f8;
+  --peri:#64c3f5;
+  --lilac:#80cdf7;
+  --rose:#8dd1f8;
+  --mauve:#0d89cb;
+  --gold:#1fa8f1;
+  --gold-2:#7dccf7;
+  --gold-3:#0d89cb;
+  --line:rgba(31,168,241,.28);
+  --shadow:0 24px 50px -24px rgba(10,101,151,.28), 0 6px 16px -10px rgba(10,101,151,.16);
   --display:'DM Serif Display', Georgia, serif;
   --body:'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -43,9 +43,9 @@ em{font-style:italic}
 /* paper + watercolor atmosphere */
 .paper{position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:
-    radial-gradient(55vw 45vw at 0% 0%, rgba(187,243,235,.28), transparent 65%),
-    radial-gradient(45vw 40vw at 100% 8%, rgba(193,241,240,.25), transparent 65%),
-    radial-gradient(60vw 50vw at 50% 110%, rgba(183,237,232,.25), transparent 65%),
+    radial-gradient(55vw 45vw at 0% 0%, rgba(138,210,248,.28), transparent 65%),
+    radial-gradient(45vw 40vw at 100% 8%, rgba(141,209,248,.25), transparent 65%),
+    radial-gradient(60vw 50vw at 50% 110%, rgba(128,205,247,.25), transparent 65%),
     var(--paper)}
 .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .48 0 0 0 0 .38 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -56,42 +56,42 @@ section{position:relative}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-.hat-ico{overflow:visible;filter:drop-shadow(0 0 2px #d0fff9) drop-shadow(0 0 7px rgba(128,255,239,.95)) drop-shadow(0 0 16px rgba(137,253,239,.7));animation:hatglow 3.2s ease-in-out infinite}
-@keyframes hatglow{0%,100%{filter:drop-shadow(0 0 2px #d0fff9) drop-shadow(0 0 7px rgba(128,255,239,.9)) drop-shadow(0 0 16px rgba(137,253,239,.65))}50%{filter:drop-shadow(0 0 4px #e6fffc) drop-shadow(0 0 12px rgba(128,255,239,1)) drop-shadow(0 0 26px rgba(137,253,239,.9))}}
+.hat-ico{overflow:visible;filter:drop-shadow(0 0 2px #d0efff) drop-shadow(0 0 7px rgba(131,212,255,.95)) drop-shadow(0 0 16px rgba(133,211,253,.7));animation:hatglow 3.2s ease-in-out infinite}
+@keyframes hatglow{0%,100%{filter:drop-shadow(0 0 2px #d0efff) drop-shadow(0 0 7px rgba(131,212,255,.9)) drop-shadow(0 0 16px rgba(133,211,253,.65))}50%{filter:drop-shadow(0 0 4px #e6f6ff) drop-shadow(0 0 12px rgba(131,212,255,1)) drop-shadow(0 0 26px rgba(133,211,253,.9))}}
 .eyebrow svg{width:34px;height:34px;margin:-8px 2px -6px 0}
 
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:.96rem;letter-spacing:.01em;transition:transform .35s cubic-bezier(.2,.9,.3,1.3), box-shadow .3s, background .3s;white-space:nowrap}
 .btn:hover{transform:translateY(-2px)}
-.btn-primary{color:#fff;background:linear-gradient(120deg,#88d8cc 0%,#7ac6bd 55%,#7eb6b2 100%);
-  box-shadow:0 12px 26px -12px rgba(88,172,162,.75), inset 0 0 0 1px rgba(255,255,255,.25)}
-.btn-primary:hover{box-shadow:0 18px 32px -12px rgba(88,172,162,.85), inset 0 0 0 1px rgba(255,255,255,.35)}
-.btn-ghost{background:rgba(250,255,255,.85);border:1px solid var(--gold-2);color:var(--ink)}
+.btn-primary{color:#fff;background:linear-gradient(120deg,#47b8f3 0%,#20a8f1 55%,#0f9ce9 100%);
+  box-shadow:0 12px 26px -12px rgba(14,143,212,.75), inset 0 0 0 1px rgba(255,255,255,.25)}
+.btn-primary:hover{box-shadow:0 18px 32px -12px rgba(14,143,212,.85), inset 0 0 0 1px rgba(255,255,255,.35)}
+.btn-ghost{background:rgba(250,253,255,.85);border:1px solid var(--gold-2);color:var(--ink)}
 .btn-ghost:hover{background:#fff}
 .btn svg{width:17px;height:17px}
 
 
 /* brand gradient, from the Money Map cover: teal blue into magenta pink */
-:root{--brand:linear-gradient(100deg,#68d3c6 0%,#4db2a7 42%,#62bab2 72%,#84d1ce 100%)}
+:root{--brand:linear-gradient(100deg,#36b1f2 0%,#0e93da 42%,#0f9be8 72%,#40b2f3 100%)}
 .hero h1 em,.head h2 em,.maps h2 em{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-right:.08em}
 .btn-primary{position:relative;overflow:hidden;background:var(--brand);
-  box-shadow:0 14px 30px -14px rgba(77,178,167,.9), 0 8px 22px -12px rgba(132,209,206,.75), inset 0 1px 0 rgba(255,255,255,.4)}
+  box-shadow:0 14px 30px -14px rgba(14,147,218,.9), 0 8px 22px -12px rgba(64,178,243,.75), inset 0 1px 0 rgba(255,255,255,.4)}
 .btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s ease}
 .btn-primary:hover::after{transform:translateX(120%)}
-.btn-primary:hover{box-shadow:0 20px 36px -14px rgba(77,178,167,1), 0 10px 26px -12px rgba(132,209,206,.9), inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-primary:hover{box-shadow:0 20px 36px -14px rgba(14,147,218,1), 0 10px 26px -12px rgba(64,178,243,.9), inset 0 1px 0 rgba(255,255,255,.5)}
 /* ---------- nav ---------- */
 header{position:fixed;top:14px;left:0;right:0;z-index:50}
 .navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 10px;border-radius:999px;
-  background:rgba(243,251,250,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:var(--shadow)}
+  background:rgba(243,248,251,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:var(--shadow)}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.3rem;font-weight:600}
 .logo img{width:38px;height:38px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1.5px var(--gold-2)}
 .nav-links{display:flex;gap:26px;font-size:.9rem;color:var(--ink-2);font-weight:500}
 .nav-links a:hover{color:var(--mauve)}
 .navbar .btn{padding:11px 20px;font-size:.88rem}
 .mnav{display:none;position:relative}
-.mnav summary{list-style:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold-2);background:#f9fffe;cursor:pointer}
+.mnav summary{list-style:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold-2);background:#f9fdff;cursor:pointer}
 .mnav summary::-webkit-details-marker{display:none}
-.mnav .menu{position:absolute;right:0;top:54px;min-width:220px;padding:10px;border-radius:18px;background:#f9fffe;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.mnav .menu{position:absolute;right:0;top:54px;min-width:220px;padding:10px;border-radius:18px;background:#f9fdff;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
 .mnav .menu a{padding:12px 14px;border-radius:12px;font-weight:500}
 .mnav .menu a:hover{background:var(--paper-2)}
 @media (max-width:860px){.nav-links{display:none}.mnav{display:block}.navbar .btn{display:none}}
@@ -112,14 +112,14 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
   background:radial-gradient(closest-side, transparent 96%, var(--gold-2) 96.4%, transparent 97.2%);}
 .portal-inner{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;
   background:
-    radial-gradient(45% 40% at 30% 30%, rgba(187,243,235,.55), transparent 70%),
-    radial-gradient(40% 40% at 72% 66%, rgba(183,237,232,.55), transparent 70%),
-    radial-gradient(30% 30% at 76% 24%, rgba(193,241,240,.45), transparent 70%),
-    radial-gradient(35% 30% at 26% 76%, rgba(193,241,240,.30), transparent 70%),
-    #f6fdfc;
-  box-shadow:inset 0 0 0 1px var(--line), inset 0 0 60px rgba(139,202,194,.18), var(--shadow)}
+    radial-gradient(45% 40% at 30% 30%, rgba(138,210,248,.55), transparent 70%),
+    radial-gradient(40% 40% at 72% 66%, rgba(128,205,247,.55), transparent 70%),
+    radial-gradient(30% 30% at 76% 24%, rgba(141,209,248,.45), transparent 70%),
+    radial-gradient(35% 30% at 26% 76%, rgba(141,209,248,.30), transparent 70%),
+    #f6fbfd;
+  box-shadow:inset 0 0 0 1px var(--line), inset 0 0 60px rgba(46,174,242,.18), var(--shadow)}
 .portal-inner::before{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;opacity:.6;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%2380cec5' stroke-width='.8' opacity='.7'%3E%3Ccircle cx='200' cy='200' r='186' stroke-dasharray='1 5'/%3E%3Cpath d='M60 120l30-22 26 14 18-30M300 300l26 10 20-24 30 6M290 70l22 18 30-8'/%3E%3C/g%3E%3Cg fill='%2380cec5'%3E%3Ccircle cx='60' cy='120' r='2'/%3E%3Ccircle cx='90' cy='98' r='2'/%3E%3Ccircle cx='116' cy='112' r='2'/%3E%3Ccircle cx='134' cy='82' r='2'/%3E%3Ccircle cx='300' cy='300' r='2'/%3E%3Ccircle cx='326' cy='310' r='2'/%3E%3Ccircle cx='346' cy='286' r='2'/%3E%3Ccircle cx='376' cy='292' r='2'/%3E%3Ccircle cx='290' cy='70' r='2'/%3E%3Ccircle cx='312' cy='88' r='2'/%3E%3Ccircle cx='342' cy='80' r='2'/%3E%3C/g%3E%3C/svg%3E");background-size:cover}
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%2333b0f2' stroke-width='.8' opacity='.7'%3E%3Ccircle cx='200' cy='200' r='186' stroke-dasharray='1 5'/%3E%3Cpath d='M60 120l30-22 26 14 18-30M300 300l26 10 20-24 30 6M290 70l22 18 30-8'/%3E%3C/g%3E%3Cg fill='%2333b0f2'%3E%3Ccircle cx='60' cy='120' r='2'/%3E%3Ccircle cx='90' cy='98' r='2'/%3E%3Ccircle cx='116' cy='112' r='2'/%3E%3Ccircle cx='134' cy='82' r='2'/%3E%3Ccircle cx='300' cy='300' r='2'/%3E%3Ccircle cx='326' cy='310' r='2'/%3E%3Ccircle cx='346' cy='286' r='2'/%3E%3Ccircle cx='376' cy='292' r='2'/%3E%3Ccircle cx='290' cy='70' r='2'/%3E%3Ccircle cx='312' cy='88' r='2'/%3E%3Ccircle cx='342' cy='80' r='2'/%3E%3C/g%3E%3C/svg%3E");background-size:cover}
 #sky{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y;opacity:0;transition:opacity 1s}
 .live #sky{opacity:1}
 #sky.dragging{cursor:grabbing}
@@ -131,18 +131,18 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 .portal-ui{position:absolute;left:0;right:0;bottom:7%;display:none;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
 .live .portal-ui{display:flex}
 .portal-ui > *{pointer-events:auto}
-.stir{background:var(--brand);color:#fff;padding:10px 20px;font-size:.88rem;box-shadow:0 10px 22px -10px rgba(77,178,167,.9), 0 6px 16px -10px rgba(132,209,206,.8)}
+.stir{background:var(--brand);color:#fff;padding:10px 20px;font-size:.88rem;box-shadow:0 10px 22px -10px rgba(14,147,218,.9), 0 6px 16px -10px rgba(64,178,243,.8)}
 .hint{font-size:.76rem;color:var(--ink-2);letter-spacing:.04em;font-weight:500}
 .sign-card{position:absolute;top:9%;left:50%;width:min(290px,82%);padding:18px 18px 16px;border-radius:20px;text-align:center;z-index:3;
   background:linear-gradient(#fff,#fff) padding-box, var(--brand) border-box;border:2px solid transparent;
-  box-shadow:0 22px 44px -16px rgba(77,178,167,.55), 0 10px 30px -14px rgba(132,209,206,.5);
+  box-shadow:0 22px 44px -16px rgba(14,147,218,.55), 0 10px 30px -14px rgba(64,178,243,.5);
   opacity:0;transform:translate(-50%,-6px) scale(.98);transition:opacity .45s, transform .45s cubic-bezier(.2,.9,.3,1.3);pointer-events:none}
 .sign-card.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
-.sign-card .sc-glyph{font-size:1.7rem;line-height:1;color:#60c2b7;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',serif}
+.sign-card .sc-glyph{font-size:1.7rem;line-height:1;color:#0fa1f0;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',serif}
 .sign-card h3{font-size:1.6rem;margin:2px 0}
-.sign-card .sc-meta{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#6dd2c7;font-weight:600;margin-bottom:8px}
+.sign-card .sc-meta{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#36b1f2;font-weight:600;margin-bottom:8px}
 .sign-card p{font-family:var(--display);font-style:italic;font-size:1.08rem;line-height:1.35;color:var(--ink-2);margin-bottom:8px}
-.sign-card a{font-size:.82rem;font-weight:600;color:#6ec6c3}
+.sign-card a{font-size:.82rem;font-weight:600;color:#23a7f1}
 .sign-card .x{position:absolute;top:6px;right:12px;color:var(--ink-3);font-size:1.2rem}
 
 @media (max-width:920px){
@@ -162,7 +162,7 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 @media (max-width:700px){.orn{display:none}}
 
 /* ---------- ribbon ---------- */
-.ribbon{overflow:hidden;padding:16px 0;border-block:1px solid var(--line);background:rgba(250,255,255,.5)}
+.ribbon{overflow:hidden;padding:16px 0;border-block:1px solid var(--line);background:rgba(250,253,255,.5)}
 .ribbon-track{display:flex;gap:40px;width:max-content;animation:slide 50s linear infinite;font-family:var(--display);font-size:1.25rem;color:var(--ink-2);font-style:italic}
 .ribbon-track span{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}
 .ribbon-track b{font-style:normal;font-family:'Apple Symbols','Segoe UI Symbol','Noto Sans Symbols 2',serif;color:var(--gold);font-weight:400;font-size:1.2rem}
@@ -182,9 +182,9 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 .picker input{position:absolute;opacity:0;pointer-events:none}
 .qs{display:flex;flex-direction:column;gap:10px}
 .q{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;cursor:pointer;
-  background:rgba(250,255,255,.6);border:1px solid rgba(118,198,189,.22);
+  background:rgba(250,253,255,.6);border:1px solid rgba(31,168,241,.22);
   font-family:var(--display);font-size:1.22rem;line-height:1.25;font-weight:500;transition:all .35s cubic-bezier(.2,.9,.3,1.2)}
-.q:hover{background:#f9fffe;border-color:var(--gold-2)}
+.q:hover{background:#f9fdff;border-color:var(--gold-2)}
 .q .qi{width:42px;height:42px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line)}
 .q .qi svg{width:26px;height:26px}
 .answers{position:relative}
@@ -208,14 +208,14 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 /* ---------- readings ---------- */
 .readings{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;position:relative;z-index:1}
 .reading{padding:14px;display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.2,.9,.3,1.2), box-shadow .5s}
-.reading:hover{transform:translateY(-5px);box-shadow:0 34px 60px -26px rgba(69,121,116,.4)}
+.reading:hover{transform:translateY(-5px);box-shadow:0 34px 60px -26px rgba(10,101,151,.4)}
 .reading .cover{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9}
 .reading .cover img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s ease}
 .reading:hover .cover img{transform:scale(1.04)}
-.reading .badge{position:absolute;top:12px;left:12px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,255,255,.92);border:1px solid var(--line);color:var(--ink)}
+.reading .badge{position:absolute;top:12px;left:12px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(250,253,255,.92);border:1px solid var(--line);color:var(--ink)}
 .reading .body{padding:20px 14px 10px;display:flex;flex-direction:column;flex:1}
 .reading .title-row{display:flex;align-items:center;gap:14px;margin-bottom:10px}
-.icon-orb{width:54px;height:54px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fff, var(--tint,#e8f7f6));border:1px solid var(--line)}
+.icon-orb{width:54px;height:54px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fff, var(--tint,#e8f2f7));border:1px solid var(--line)}
 .icon-orb svg{width:32px;height:32px}
 .reading h3{font-size:2.3rem}
 .reading .hook{font-family:var(--display);font-size:1.32rem;line-height:1.32;color:var(--ink);margin-bottom:12px;font-style:italic}
@@ -229,7 +229,7 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 /* ---------- start here ---------- */
 .starters{display:grid;grid-template-columns:1fr 1fr;gap:28px;position:relative;z-index:1}
 .starter{display:grid;grid-template-columns:140px 1fr;gap:22px;padding:18px;align-items:center}
-.starter .thumb{border-radius:12px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 14px 24px -14px rgba(39,91,86,.5)}
+.starter .thumb{border-radius:12px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 14px 24px -14px rgba(7,75,111,.5)}
 .starter .thumb img{width:100%;height:100%;object-fit:cover}
 .starter h3{font-size:1.9rem;margin:6px 0 6px}
 .starter p{color:var(--ink-2);font-size:.94rem;margin-bottom:14px}
@@ -241,23 +241,23 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 /* soft watercolor feature band */
 .band{border-radius:30px;position:relative;overflow:hidden;border:1px solid var(--line);
   background:
-    radial-gradient(50% 70% at 0% 100%, rgba(193,241,240,.55), transparent 70%),
-    radial-gradient(50% 70% at 100% 0%, rgba(187,243,235,.6), transparent 70%),
-    radial-gradient(60% 80% at 60% 60%, rgba(183,237,232,.45), transparent 70%),
-    #f1faf9;
+    radial-gradient(50% 70% at 0% 100%, rgba(141,209,248,.55), transparent 70%),
+    radial-gradient(50% 70% at 100% 0%, rgba(138,210,248,.6), transparent 70%),
+    radial-gradient(60% 80% at 60% 60%, rgba(128,205,247,.45), transparent 70%),
+    #f1f7fa;
   box-shadow:var(--shadow)}
 .calendar{margin-top:28px;display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center;padding:36px}
 .calendar h3{font-size:clamp(2rem,3.4vw,2.9rem);margin:10px 0 10px}
 .calendar p{color:var(--ink-2)}
-.calendar .shot{border-radius:16px;overflow:hidden;border:1px solid var(--gold-2);box-shadow:0 20px 40px -18px rgba(15,35,34,.5)}
+.calendar .shot{border-radius:16px;overflow:hidden;border:1px solid var(--gold-2);box-shadow:0 20px 40px -18px rgba(14,28,36,.5)}
 .moons{display:flex;gap:9px;margin:18px 0 22px}
-.moons i{width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7fffe,#c5f1ec);border:1px solid var(--gold-2)}
+.moons i{width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f7fcff,#8bd2f8);border:1px solid var(--gold-2)}
 @media (max-width:860px){.calendar{grid-template-columns:1fr;padding:24px}}
 
 /* ---------- how ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}
 .step{padding:30px 26px;text-align:center;position:relative}
-.step .n{position:absolute;top:14px;right:22px;font-family:var(--display);font-size:2.8rem;color:rgba(118,198,189,.28);font-weight:600;font-style:italic}
+.step .n{position:absolute;top:14px;right:22px;font-family:var(--display);font-size:2.8rem;color:rgba(31,168,241,.28);font-weight:600;font-style:italic}
 .step .icon-orb{margin:0 auto 16px;width:76px;height:76px}
 .step .icon-orb svg{width:46px;height:46px}
 .step h3{font-size:1.65rem;margin-bottom:8px}
@@ -305,67 +305,67 @@ footer{padding:46px 0 40px;color:var(--ink-3);font-size:.88rem}
 
 /* ================= VERSION 5: COSMIC NIGHT ================= */
 :root{
-  --ink:#ecfffd;--ink-2:rgba(229,255,252,.8);--ink-3:rgba(211,253,248,.56);
-  --card:rgba(255,255,255,.055);--line:rgba(204,255,249,.18);
-  --gold:#bdfff7;--gold-2:rgba(198,255,248,.45);--gold-3:#dcfffb;--mauve:#b4fff6;
+  --ink:#ecf8ff;--ink-2:rgba(229,246,255,.8);--ink-3:rgba(211,238,253,.56);
+  --card:rgba(255,255,255,.055);--line:rgba(204,237,255,.18);
+  --gold:#bde8ff;--gold-2:rgba(198,235,255,.45);--gold-3:#dcf3ff;--mauve:#93d9ff;
   --shadow:0 30px 60px -28px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.02);
-  --brand:linear-gradient(100deg,#0b7f80 0%,#11998f 40%,#c65a93 82%,#e2689f 100%);
-  --iris:linear-gradient(100deg,#8ff5e8 0%,#b9f7f0 35%,#ffb8d8 70%,#ff8fc4 100%);
+  --brand:linear-gradient(100deg,#1a86cf 0%,#33a4ea 40%,#c65a93 82%,#e2689f 100%);
+  --iris:linear-gradient(100deg,#6cc4f7 0%,#a6dcfb 38%,#ffb8d8 70%,#ff8fc4 100%);
 }
-body{color:var(--ink);background:radial-gradient(90% 60% at 70% 0%,#06252a 0%,transparent 70%),linear-gradient(180deg,#040c0e 0px,#030809 900px,#020506 2400px,#020405 100%)}
+body{color:var(--ink);background:radial-gradient(90% 60% at 70% 0%,#051c2b 0%,transparent 70%),linear-gradient(180deg,#040a0e 0px,#030709 900px,#020406 2400px,#020405 100%)}
 .paper{display:none}
 .grain{mix-blend-mode:overlay;opacity:.22}
 #cosmos{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 .stars-css{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.8;
-  background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#dcfffb,transparent),radial-gradient(1.5px 1.5px at 200px 160px,#fff,transparent),radial-gradient(1px 1px at 60px 190px,#cffff7,transparent),radial-gradient(1px 1px at 170px 240px,#fff,transparent);
+  background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#dcf3ff,transparent),radial-gradient(1.5px 1.5px at 200px 160px,#fff,transparent),radial-gradient(1px 1px at 60px 190px,#cfefff,transparent),radial-gradient(1px 1px at 170px 240px,#fff,transparent);
   background-size:260px 260px}
 .cosmos-on .stars-css{display:none}
 .wash{opacity:.22;mix-blend-mode:screen}
 .hero h1 em,.head h2 em,.maps h2 em{background:var(--iris);-webkit-background-clip:text;background-clip:text}
-.hero h1,.head h2,.maps h2,.final h2{text-shadow:0 0 40px rgba(140,255,242,.25)}
+.hero h1,.head h2,.maps h2,.final h2{text-shadow:0 0 40px rgba(135,213,255,.25)}
 .card{background:var(--card);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-color:var(--line)}
-.navbar{background:rgba(9,24,23,.55);border-color:rgba(255,255,255,.14)}
+.navbar{background:rgba(8,19,25,.55);border-color:rgba(255,255,255,.14)}
 .btn-ghost{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.32);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.14)}
-.btn-primary{box-shadow:0 14px 34px -12px rgba(100,255,237,.75), 0 0 22px -6px rgba(141,242,241,.45), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-primary{box-shadow:0 14px 34px -12px rgba(126,210,255,.75), 0 0 22px -6px rgba(128,204,247,.45), inset 0 1px 0 rgba(255,255,255,.35)}
 .mnav summary{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
 .mnav summary svg path{stroke:#fff}
-.mnav .menu{background:#0a1b1a;border-color:rgba(255,255,255,.14)}
+.mnav .menu{background:#09151c;border-color:rgba(255,255,255,.14)}
 .mnav .menu a:hover{background:rgba(255,255,255,.08)}
 .ribbon{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.1)}
-.ribbon-track b{color:#bdfff7}
+.ribbon-track b{color:#bde8ff}
 .q{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
-.q:hover{background:rgba(255,255,255,.09);border-color:rgba(198,255,248,.4)}
+.q:hover{background:rgba(255,255,255,.09);border-color:rgba(198,235,255,.4)}
 .q .qi{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
-.icon-orb{background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.28),rgba(255,255,255,.04) 70%);border-color:rgba(255,255,255,.16);box-shadow:0 0 24px -6px rgba(150,255,243,.45)}
-.reading .badge{background:rgba(7,20,19,.72);color:#fff;border-color:rgba(255,255,255,.18)}
+.icon-orb{background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.28),rgba(255,255,255,.04) 70%);border-color:rgba(255,255,255,.16);box-shadow:0 0 24px -6px rgba(138,214,255,.45)}
+.reading .badge{background:rgba(6,16,21,.72);color:#fff;border-color:rgba(255,255,255,.18)}
 .reading .foot{border-top-color:rgba(255,255,255,.12)}
 .band{background:
-    radial-gradient(50% 70% at 0% 100%, rgba(106,211,205,.32), transparent 70%),
-    radial-gradient(50% 70% at 100% 0%, rgba(110,255,233,.3), transparent 70%),
-    radial-gradient(60% 80% at 60% 60%, rgba(100,255,237,.25), transparent 70%),
+    radial-gradient(50% 70% at 0% 100%, rgba(59,177,243,.32), transparent 70%),
+    radial-gradient(50% 70% at 100% 0%, rgba(126,211,255,.3), transparent 70%),
+    radial-gradient(60% 80% at 60% 60%, rgba(126,210,255,.25), transparent 70%),
     rgba(255,255,255,.04);border-color:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.moons i{background:radial-gradient(circle at 35% 30%,#fff,#ccfff9);border-color:rgba(255,255,255,.4);box-shadow:0 0 10px rgba(200,255,249,.5)}
+.moons i{background:radial-gradient(circle at 35% 30%,#fff,#ccedff);border-color:rgba(255,255,255,.4);box-shadow:0 0 10px rgba(200,236,255,.5)}
 .moons i[style]{filter:brightness(.98)}
-.step .n{color:rgba(198,255,248,.25)}
+.step .n{color:rgba(198,235,255,.25)}
 .venn g[style]{mix-blend-mode:screen!important}
-.faq summary .pm{border-color:rgba(198,255,248,.45)}
-.faq summary .pm path{stroke:#dcfffb}
-.portal{background:radial-gradient(closest-side, transparent 96%, rgba(198,255,248,.55) 96.4%, transparent 97.2%)}
+.faq summary .pm{border-color:rgba(198,235,255,.45)}
+.faq summary .pm path{stroke:#dcf3ff}
+.portal{background:radial-gradient(closest-side, transparent 96%, rgba(198,235,255,.55) 96.4%, transparent 97.2%)}
 .portal-inner{background:
-    radial-gradient(45% 40% at 30% 30%, rgba(110,255,233,.28), transparent 70%),
-    radial-gradient(40% 40% at 72% 66%, rgba(110,255,239,.32), transparent 70%),
-    radial-gradient(30% 30% at 76% 24%, rgba(141,242,241,.22), transparent 70%),
-    radial-gradient(circle at 50% 45%, rgba(34,122,112,.55), rgba(6,15,15,.55) 75%);
-  box-shadow:inset 0 0 0 1px rgba(198,255,248,.25), inset 0 0 80px rgba(110,255,238,.25), 0 0 80px -10px rgba(110,255,238,.45)}
-.hint{color:rgba(229,255,252,.75)}
-.sign-card{background:linear-gradient(#0c1f1e,#0c1f1e) padding-box, var(--brand) border-box;box-shadow:0 0 40px -6px rgba(110,255,238,.6)}
-.sign-card .sc-glyph{color:#bdfff7}.sign-card .sc-meta{color:#a9fff0}.sign-card a{color:#aef5f1}.sign-card p{color:var(--ink-2)}
-.final .hat{mix-blend-mode:normal;border-radius:50%;aspect-ratio:1/1;object-fit:cover;object-position:center 46%;box-shadow:0 0 0 1px rgba(255,255,255,.3),0 0 70px rgba(160,255,244,.55)}
+    radial-gradient(45% 40% at 30% 30%, rgba(126,211,255,.28), transparent 70%),
+    radial-gradient(40% 40% at 72% 66%, rgba(128,211,255,.32), transparent 70%),
+    radial-gradient(30% 30% at 76% 24%, rgba(128,204,247,.22), transparent 70%),
+    radial-gradient(circle at 50% 45%, rgba(9,99,147,.55), rgba(6,12,15,.55) 75%);
+  box-shadow:inset 0 0 0 1px rgba(198,235,255,.25), inset 0 0 80px rgba(128,211,255,.25), 0 0 80px -10px rgba(128,211,255,.45)}
+.hint{color:rgba(229,246,255,.75)}
+.sign-card{background:linear-gradient(#0b1820,#0b1820) padding-box, var(--brand) border-box;box-shadow:0 0 40px -6px rgba(128,211,255,.6)}
+.sign-card .sc-glyph{color:#bde8ff}.sign-card .sc-meta{color:#8dd8ff}.sign-card a{color:#8cd1f8}.sign-card p{color:var(--ink-2)}
+.final .hat{mix-blend-mode:normal;border-radius:50%;aspect-ratio:1/1;object-fit:cover;object-position:center 46%;box-shadow:0 0 0 1px rgba(255,255,255,.3),0 0 70px rgba(141,215,255,.55)}
 .calendar .shot{border-color:rgba(255,255,255,.2)}
-.logo img{box-shadow:0 0 0 1.5px rgba(198,255,248,.6),0 0 16px rgba(120,255,239,.6)}
+.logo img{box-shadow:0 0 0 1.5px rgba(198,235,255,.6),0 0 16px rgba(130,212,255,.6)}
 
-.orn.astro{filter:drop-shadow(0 0 6px rgba(190,255,248,.75)) drop-shadow(0 0 18px rgba(140,255,242,.45))}
+.orn.astro{filter:drop-shadow(0 0 6px rgba(190,232,255,.75)) drop-shadow(0 0 18px rgba(135,213,255,.45))}
 .orn.spin{animation:spinslow 60s linear infinite}
 .spin-slow{transform-origin:60px 60px;animation:spinslow 24s linear infinite reverse}
 @keyframes spinslow{to{transform:rotate(360deg)}}
@@ -373,19 +373,19 @@ body{color:var(--ink);background:radial-gradient(90% 60% at 70% 0%,#06252a 0%,tr
 /* giant turning zodiac wheel behind the hero */
 .hero{overflow:visible}
 .zwrap{position:absolute;z-index:0;pointer-events:none;top:50%;right:-14%;width:min(1100px,95vw);aspect-ratio:1/1;transform:translateY(-50%);opacity:.45;
-  filter:drop-shadow(0 0 6px rgba(180,255,246,.6));-webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);mask-image:radial-gradient(closest-side,#000 80%,transparent 100%)}
+  filter:drop-shadow(0 0 6px rgba(147,217,255,.6));-webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);mask-image:radial-gradient(closest-side,#000 80%,transparent 100%)}
 .zwheel{width:100%;height:100%;overflow:visible}
 .zw-spin{transform-box:view-box;transform-origin:50% 50%;animation:spinslow 200s linear infinite}
 .hero-grid{position:relative;z-index:1}
 @media (max-width:920px){.zwrap{right:auto;left:50%;top:auto;bottom:-4%;transform:translateX(-50%);width:150vw;opacity:.3}}
 /* moon phase dividers */
 .phases{display:flex;justify-content:center;gap:clamp(10px,2.2vw,22px);padding:26px 0 0;position:relative;z-index:1}
-.phases i{width:clamp(16px,2.2vw,24px);height:clamp(16px,2.2vw,24px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#ccfff9);box-shadow:inset 0 0 0 #091716}
-.phases i.full{box-shadow:0 0 18px 4px rgba(200,255,249,.65)}
+.phases i{width:clamp(16px,2.2vw,24px);height:clamp(16px,2.2vw,24px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#ccedff);box-shadow:inset 0 0 0 #081218}
+.phases i.full{box-shadow:0 0 18px 4px rgba(200,236,255,.65)}
 
 /* ================= READABLE TYPE: DM Serif Display + Outfit ================= */
 :root{--display:'DM Serif Display', Georgia, serif;--body:'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ink-2:rgba(229,255,252,.92);--ink-3:rgba(211,253,248,.72)}
+  --ink-2:rgba(229,246,255,.92);--ink-3:rgba(211,238,253,.72)}
 html{font-size:112.5%}
 @media (max-width:600px){html{font-size:106.25%}}
 body{line-height:1.65}
@@ -407,32 +407,32 @@ h1,h2{letter-spacing:-.012em}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <linearGradient id="gV" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c5f5ef"/><stop offset="1" stop-color="#60c2b7"/></linearGradient>
-    <linearGradient id="gP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ccf4f3"/><stop offset="1" stop-color="#88cbc9"/></linearGradient>
-    <linearGradient id="gG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8f8f5"/><stop offset="1" stop-color="#7dcac1"/></linearGradient>
-    <linearGradient id="gS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d2f8f2"/><stop offset="1" stop-color="#8de2d6"/></linearGradient>
-    <linearGradient id="gR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8f5f4"/><stop offset="1" stop-color="#76bbb8"/></linearGradient>
-    <radialGradient id="coin" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#e3fcf9"/><stop offset=".55" stop-color="#b7efe9"/><stop offset="1" stop-color="#7ecec5"/></radialGradient>
+    <linearGradient id="gV" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c5e4f5"/><stop offset="1" stop-color="#0fa1f0"/></linearGradient>
+    <linearGradient id="gP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cce6f4"/><stop offset="1" stop-color="#36aef2"/></linearGradient>
+    <linearGradient id="gG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8edf8"/><stop offset="1" stop-color="#29acf1"/></linearGradient>
+    <linearGradient id="gS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d2ebf8"/><stop offset="1" stop-color="#5dc0f5"/></linearGradient>
+    <linearGradient id="gR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8e5f5"/><stop offset="1" stop-color="#0f9eee"/></linearGradient>
+    <radialGradient id="coin" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#e3f3fc"/><stop offset=".55" stop-color="#83cff7"/><stop offset="1" stop-color="#33aff2"/></radialGradient>
 
-    <linearGradient id="gHat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2fffe"/><stop offset=".35" stop-color="#bdfff7"/><stop offset=".75" stop-color="#89f5e7"/><stop offset="1" stop-color="#54d9c9"/></linearGradient>
-    <linearGradient id="gBrim" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9af6eb"/><stop offset=".5" stop-color="#defffb"/><stop offset="1" stop-color="#6ce3d5"/></linearGradient>
+    <linearGradient id="gHat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2faff"/><stop offset=".35" stop-color="#bde8ff"/><stop offset=".75" stop-color="#7fcdf7"/><stop offset="1" stop-color="#3eb4f3"/></linearGradient>
+    <linearGradient id="gBrim" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#85d0f7"/><stop offset=".5" stop-color="#def4ff"/><stop offset="1" stop-color="#57bef4"/></linearGradient>
     <symbol id="hat" viewBox="0 0 32 32">
       <path d="M8.6 23C11.5 16.5 12.6 9.6 15.8 4.6c1.6-2.5 4.9-2.3 6.3-.2-1.9-.4-3.5.7-3.6 2.8.2 5.6 2.4 11 4.6 15.8z" fill="url(#gHat)"/>
       <path d="M2.5 23.6c4.5-3 22.5-3 27 0-3.4 3.4-23.6 3.4-27 0z" fill="url(#gBrim)"/>
-      <path d="M9.4 21.6c4.2-1.3 9.6-1.3 13.8 0" stroke="#f3fffe" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".9"/>
-      <path d="M14.6 12.4a3 3 0 1 0 3.3 3.8 2.4 2.4 0 1 1-3.3-3.8z" fill="#e6fff6"/>
+      <path d="M9.4 21.6c4.2-1.3 9.6-1.3 13.8 0" stroke="#f3fbff" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".9"/>
+      <path d="M14.6 12.4a3 3 0 1 0 3.3 3.8 2.4 2.4 0 1 1-3.3-3.8z" fill="#e6f7ff"/>
       <path d="M13.7 8.6c.6-1.6 1.2-2.7 2.1-3.7" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round" opacity=".85"/>
     </symbol>
-    <symbol id="spark" viewBox="0 0 40 40"><path d="M20 0c.8 9 2 18 20 20-18 2-19.2 11-20 20-.8-9-2-18-20-20 18-2 19.2-11 20-20z" fill="#8fdad1"/></symbol>
+    <symbol id="spark" viewBox="0 0 40 40"><path d="M20 0c.8 9 2 18 20 20-18 2-19.2 11-20 20-.8-9-2-18-20-20 18-2 19.2-11 20-20z" fill="#4fbbf4"/></symbol>
     <symbol id="spark-sm" viewBox="0 0 24 24"><path d="M12 1c.6 6 1.4 10 11 11-9.6 1-10.4 5-11 11-.6-6-1.4-10-11-11 9.6-1 10.4-5 11-11z" fill="url(#gG)"/></symbol>
 
 
     <!-- glowing astrology elements (replace the coins) -->
-    <radialGradient id="moonFill" cx="30%" cy="35%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#d8fffb"/><stop offset="1" stop-color="#94e8de"/></radialGradient>
-    <radialGradient id="satFill" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f4ffff"/><stop offset=".55" stop-color="#c1ebe8"/><stop offset="1" stop-color="#7dd8ce"/></radialGradient>
-    <linearGradient id="cometTail" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".3" stop-color="#ccfff9" stop-opacity=".6"/><stop offset="1" stop-color="#a6fff4" stop-opacity="0"/></linearGradient>
+    <radialGradient id="moonFill" cx="30%" cy="35%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#d8f1ff"/><stop offset="1" stop-color="#6bc5f6"/></radialGradient>
+    <radialGradient id="satFill" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f4fbff"/><stop offset=".55" stop-color="#81cdf7"/><stop offset="1" stop-color="#47b7f3"/></radialGradient>
+    <linearGradient id="cometTail" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".3" stop-color="#ccedff" stop-opacity=".6"/><stop offset="1" stop-color="#8ed8ff" stop-opacity="0"/></linearGradient>
     <symbol id="astro-astrolabe" viewBox="0 0 120 120">
-      <g fill="none" stroke="#dcfffb" stroke-linecap="round">
+      <g fill="none" stroke="#dcf3ff" stroke-linecap="round">
         <circle cx="60" cy="60" r="54" stroke-width="1.4"/>
         <circle cx="60" cy="60" r="46" stroke-width=".8" stroke-dasharray="1.5 3.5"/>
         <g class="spin-slow"><ellipse cx="60" cy="60" rx="54" ry="18" stroke-width="1.2" transform="rotate(-24 60 60)"/>
@@ -441,24 +441,24 @@ h1,h2{letter-spacing:-.012em}
         <path d="M60 2v8M60 110v8M2 60h8M110 60h8" stroke-width="1.2"/>
         <path d="M19 19l5 5M96 96l5 5M19 101l5-5M96 24l5-5" stroke-width=".9"/>
       </g>
-      <circle cx="60" cy="60" r="7" fill="#fff"/><circle cx="60" cy="60" r="12" fill="none" stroke="#dcfffb" stroke-width=".8"/>
-      <text x="60" y="34" text-anchor="middle" font-size="11" fill="#dcfffb" font-family="Apple Symbols,Segoe UI Symbol,serif">♈︎</text>
-      <text x="60" y="94" text-anchor="middle" font-size="11" fill="#dcfffb" font-family="Apple Symbols,Segoe UI Symbol,serif">♎︎</text>
-      <text x="30" y="64" text-anchor="middle" font-size="11" fill="#dcfffb" font-family="Apple Symbols,Segoe UI Symbol,serif">♋︎</text>
-      <text x="90" y="64" text-anchor="middle" font-size="11" fill="#dcfffb" font-family="Apple Symbols,Segoe UI Symbol,serif">♑︎</text>
+      <circle cx="60" cy="60" r="7" fill="#fff"/><circle cx="60" cy="60" r="12" fill="none" stroke="#dcf3ff" stroke-width=".8"/>
+      <text x="60" y="34" text-anchor="middle" font-size="11" fill="#dcf3ff" font-family="Apple Symbols,Segoe UI Symbol,serif">♈︎</text>
+      <text x="60" y="94" text-anchor="middle" font-size="11" fill="#dcf3ff" font-family="Apple Symbols,Segoe UI Symbol,serif">♎︎</text>
+      <text x="30" y="64" text-anchor="middle" font-size="11" fill="#dcf3ff" font-family="Apple Symbols,Segoe UI Symbol,serif">♋︎</text>
+      <text x="90" y="64" text-anchor="middle" font-size="11" fill="#dcf3ff" font-family="Apple Symbols,Segoe UI Symbol,serif">♑︎</text>
     </symbol>
     <symbol id="astro-moon" viewBox="0 0 120 120">
       <path d="M74 14a46 46 0 1 0 32 74A38 38 0 1 1 74 14z" fill="url(#moonFill)"/>
       <path d="M74 14a46 46 0 1 0 32 74A38 38 0 1 1 74 14z" fill="none" stroke="#fff" stroke-width="1"/>
-      <circle cx="40" cy="66" r="5" fill="#a4f1e8" opacity=".45"/><circle cx="54" cy="88" r="3.5" fill="#a4f1e8" opacity=".4"/><circle cx="34" cy="44" r="2.5" fill="#a4f1e8" opacity=".4"/>
+      <circle cx="40" cy="66" r="5" fill="#80cdf7" opacity=".45"/><circle cx="54" cy="88" r="3.5" fill="#80cdf7" opacity=".4"/><circle cx="34" cy="44" r="2.5" fill="#80cdf7" opacity=".4"/>
       
       
     </symbol>
     <symbol id="astro-saturn" viewBox="0 0 140 110">
-      <path d="M12 66c10-14 106-38 116-26" fill="none" stroke="#dcfffb" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+      <path d="M12 66c10-14 106-38 116-26" fill="none" stroke="#dcf3ff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
       <circle cx="70" cy="55" r="30" fill="url(#satFill)"/>
       <path d="M44 46c14 3 38 2 52-4M42 60c16 3 40 1 56-5" stroke="#fff" stroke-width="1.6" fill="none" opacity=".5"/>
-      <path d="M128 40c8 10-96 40-116 26" fill="none" stroke="#dcfffb" stroke-width="5" stroke-linecap="round"/>
+      <path d="M128 40c8 10-96 40-116 26" fill="none" stroke="#dcf3ff" stroke-width="5" stroke-linecap="round"/>
       <path d="M128 40c8 10-96 40-116 26" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
     </symbol>
     <symbol id="astro-comet" viewBox="0 0 140 100">
@@ -466,31 +466,31 @@ h1,h2{letter-spacing:-.012em}
       <circle cx="118" cy="20" r="8" fill="#fff"/><circle cx="118" cy="20" r="14" fill="#fff" opacity=".25"/>
     </symbol>
     <symbol id="astro-sun" viewBox="0 0 100 100">
-      <g stroke="#dcfffb" stroke-width="1.6" stroke-linecap="round"><path d="M50 6v12M50 82v12M6 50h12M82 50h12M19 19l8 8M73 73l8 8M19 81l8-8M73 27l8-8"/></g>
-      <circle cx="50" cy="50" r="22" fill="none" stroke="#dcfffb" stroke-width="1.6"/><circle cx="50" cy="50" r="4.5" fill="#fff"/>
+      <g stroke="#dcf3ff" stroke-width="1.6" stroke-linecap="round"><path d="M50 6v12M50 82v12M6 50h12M82 50h12M19 19l8 8M73 73l8 8M19 81l8-8M73 27l8-8"/></g>
+      <circle cx="50" cy="50" r="22" fill="none" stroke="#dcf3ff" stroke-width="1.6"/><circle cx="50" cy="50" r="4.5" fill="#fff"/>
     </symbol>
     <symbol id="coin-moon" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#56b2a7" stroke-width="1.6"/>
-      <circle cx="50" cy="50" r="37" fill="none" stroke="#56b2a7" stroke-width="1.6" stroke-dasharray="1 4" stroke-linecap="round"/>
-      <path d="M56 28a22 22 0 1 0 12 36 18 18 0 1 1-12-36z" fill="#e7fdfa" stroke="#56b2a7" stroke-width="1.4"/>
-      <path d="M66 36l1.2 3.4 3.4 1.2-3.4 1.2L66 45l-1.2-3.2-3.4-1.2 3.4-1.2z" fill="#56b2a7"/>
+      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#0e94db" stroke-width="1.6"/>
+      <circle cx="50" cy="50" r="37" fill="none" stroke="#0e94db" stroke-width="1.6" stroke-dasharray="1 4" stroke-linecap="round"/>
+      <path d="M56 28a22 22 0 1 0 12 36 18 18 0 1 1-12-36z" fill="#e7f5fd" stroke="#0e94db" stroke-width="1.4"/>
+      <path d="M66 36l1.2 3.4 3.4 1.2-3.4 1.2L66 45l-1.2-3.2-3.4-1.2 3.4-1.2z" fill="#0e94db"/>
     </symbol>
     <symbol id="coin-star" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#56b2a7" stroke-width="1.6"/>
-      <circle cx="50" cy="50" r="37" fill="none" stroke="#56b2a7" stroke-width="1.6" stroke-dasharray="1 4" stroke-linecap="round"/>
-      <path d="M50 22l4 22 22 6-22 6-4 22-4-22-22-6 22-6z" fill="#e7fdfa" stroke="#56b2a7" stroke-width="1.4" stroke-linejoin="round"/>
-      <path d="M50 34l2 14 14 2-14 2-2 14-2-14-14-2 14-2z" fill="#56b2a7" opacity=".55" transform="rotate(45 50 50)"/>
+      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#0e94db" stroke-width="1.6"/>
+      <circle cx="50" cy="50" r="37" fill="none" stroke="#0e94db" stroke-width="1.6" stroke-dasharray="1 4" stroke-linecap="round"/>
+      <path d="M50 22l4 22 22 6-22 6-4 22-4-22-22-6 22-6z" fill="#e7f5fd" stroke="#0e94db" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M50 34l2 14 14 2-14 2-2 14-2-14-14-2 14-2z" fill="#0e94db" opacity=".55" transform="rotate(45 50 50)"/>
     </symbol>
     <symbol id="coin-sun" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#56b2a7" stroke-width="1.6"/>
-      <g stroke="#56b2a7" stroke-width="1.6" stroke-linecap="round">
+      <circle cx="50" cy="50" r="46" fill="url(#coin)"/><circle cx="50" cy="50" r="43" fill="none" stroke="#0e94db" stroke-width="1.6"/>
+      <g stroke="#0e94db" stroke-width="1.6" stroke-linecap="round">
         <path d="M50 18v8M50 74v8M18 50h8M74 50h8M27 27l6 6M67 67l6 6M27 73l6-6M67 33l6-6"/>
       </g>
-      <circle cx="50" cy="50" r="17" fill="#e7fdfa" stroke="#56b2a7" stroke-width="1.4"/>
-      <path d="M42 47q3 3 6 0M52 47q3 3 6 0M44 56q6 5 12 0" stroke="#56b2a7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="17" fill="#e7f5fd" stroke="#0e94db" stroke-width="1.4"/>
+      <path d="M42 47q3 3 6 0M52 47q3 3 6 0M44 56q6 5 12 0" stroke="#0e94db" stroke-width="1.5" fill="none" stroke-linecap="round"/>
     </symbol>
-    <symbol id="constel-a" viewBox="0 0 160 120"><g fill="none" stroke="#8fdad1" stroke-width=".9"><path d="M8 100L46 70l40 12 24-40 42-28"/></g><g fill="#8fdad1"><circle cx="8" cy="100" r="2.6"/><circle cx="46" cy="70" r="2.2"/><circle cx="86" cy="82" r="3"/><circle cx="110" cy="42" r="2.2"/><circle cx="152" cy="14" r="2.8"/></g></symbol>
-    <symbol id="constel-b" viewBox="0 0 120 140"><g fill="none" stroke="#8fdad1" stroke-width=".9"><path d="M10 10l40 30 4 50 46 40M54 90L20 120"/></g><g fill="#8fdad1"><circle cx="10" cy="10" r="2.6"/><circle cx="50" cy="40" r="2.2"/><circle cx="54" cy="90" r="3"/><circle cx="100" cy="130" r="2.4"/><circle cx="20" cy="120" r="2.2"/></g></symbol>
+    <symbol id="constel-a" viewBox="0 0 160 120"><g fill="none" stroke="#4fbbf4" stroke-width=".9"><path d="M8 100L46 70l40 12 24-40 42-28"/></g><g fill="#4fbbf4"><circle cx="8" cy="100" r="2.6"/><circle cx="46" cy="70" r="2.2"/><circle cx="86" cy="82" r="3"/><circle cx="110" cy="42" r="2.2"/><circle cx="152" cy="14" r="2.8"/></g></symbol>
+    <symbol id="constel-b" viewBox="0 0 120 140"><g fill="none" stroke="#4fbbf4" stroke-width=".9"><path d="M10 10l40 30 4 50 46 40M54 90L20 120"/></g><g fill="#4fbbf4"><circle cx="10" cy="10" r="2.6"/><circle cx="50" cy="40" r="2.2"/><circle cx="54" cy="90" r="3"/><circle cx="100" cy="130" r="2.4"/><circle cx="20" cy="120" r="2.2"/></g></symbol>
   </defs>
 </svg>
 
@@ -503,7 +503,7 @@ h1,h2{letter-spacing:-.012em}
       </nav>
       <a class="btn btn-primary" href="#readings">Choose a reading</a>
       <details class="mnav">
-        <summary aria-label="Menu"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 6h14M3 10h14M3 14h14" stroke="#e9fffc" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <summary aria-label="Menu"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 6h14M3 10h14M3 14h14" stroke="#e9f7ff" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="menu"><a href="#find">Find yours</a><a href="#readings">Readings</a><a href="#start">Start here</a><a href="#how">How it works</a><a href="#faq">Questions</a></div>
       </details>
     </div>
@@ -513,7 +513,7 @@ h1,h2{letter-spacing:-.012em}
 <main id="top">
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="zwrap"><svg class="zwheel" viewBox="0 0 1000 1000" aria-hidden="true"><g class="zw-spin" fill="none" stroke="#d0fff9" stroke-linecap="round"><circle cx="500" cy="500" r="470" stroke-width="1.6"/><circle cx="500" cy="500" r="456" stroke-width=".8"/><circle cx="500" cy="500" r="400" stroke-width="1.2"/><circle cx="500" cy="500" r="330" stroke-width=".8" stroke-dasharray="2 7"/><circle cx="500" cy="500" r="270" stroke-width=".6"/><path d="M970.0 500.0L956.0 500.0" stroke-width="1.2"/><path d="M969.7 516.4L964.7 516.2" stroke-width="0.7"/><path d="M968.9 532.8L963.9 532.4" stroke-width="0.7"/><path d="M967.4 549.1L962.5 548.6" stroke-width="0.7"/><path d="M965.4 565.4L960.5 564.7" stroke-width="0.7"/><path d="M962.9 581.6L954.0 580.1" stroke-width="0.7"/><path d="M959.7 597.7L954.8 596.7" stroke-width="0.7"/><path d="M956.0 613.7L951.2 612.5" stroke-width="0.7"/><path d="M951.8 629.5L947.0 628.2" stroke-width="0.7"/><path d="M947.0 645.2L942.2 643.7" stroke-width="0.7"/><path d="M941.7 660.7L933.2 657.7" stroke-width="0.7"/><path d="M935.8 676.1L931.1 674.2" stroke-width="0.7"/><path d="M929.4 691.2L924.8 689.1" stroke-width="0.7"/><path d="M922.4 706.0L917.9 703.8" stroke-width="0.7"/><path d="M915.0 720.7L910.6 718.3" stroke-width="0.7"/><path d="M907.0 735.0L894.9 728.0" stroke-width="1.2"/><path d="M898.6 749.1L894.3 746.4" stroke-width="0.7"/><path d="M889.6 762.8L885.5 760.0" stroke-width="0.7"/><path d="M880.2 776.3L876.2 773.3" stroke-width="0.7"/><path d="M870.4 789.4L866.4 786.3" stroke-width="0.7"/><path d="M860.0 802.1L853.1 796.3" stroke-width="0.7"/><path d="M849.3 814.5L845.6 811.1" stroke-width="0.7"/><path d="M838.1 826.5L834.5 823.0" stroke-width="0.7"/><path d="M826.5 838.1L823.0 834.5" stroke-width="0.7"/><path d="M814.5 849.3L811.1 845.6" stroke-width="0.7"/><path d="M802.1 860.0L796.3 853.1" stroke-width="0.7"/><path d="M789.4 870.4L786.3 866.4" stroke-width="0.7"/><path d="M776.3 880.2L773.3 876.2" stroke-width="0.7"/><path d="M762.8 889.6L760.0 885.5" stroke-width="0.7"/><path d="M749.1 898.6L746.4 894.3" stroke-width="0.7"/><path d="M735.0 907.0L728.0 894.9" stroke-width="1.2"/><path d="M720.7 915.0L718.3 910.6" stroke-width="0.7"/><path d="M706.0 922.4L703.8 917.9" stroke-width="0.7"/><path d="M691.2 929.4L689.1 924.8" stroke-width="0.7"/><path d="M676.1 935.8L674.2 931.1" stroke-width="0.7"/><path d="M660.7 941.7L657.7 933.2" stroke-width="0.7"/><path d="M645.2 947.0L643.7 942.2" stroke-width="0.7"/><path d="M629.5 951.8L628.2 947.0" stroke-width="0.7"/><path d="M613.7 956.0L612.5 951.2" stroke-width="0.7"/><path d="M597.7 959.7L596.7 954.8" stroke-width="0.7"/><path d="M581.6 962.9L580.1 954.0" stroke-width="0.7"/><path d="M565.4 965.4L564.7 960.5" stroke-width="0.7"/><path d="M549.1 967.4L548.6 962.5" stroke-width="0.7"/><path d="M532.8 968.9L532.4 963.9" stroke-width="0.7"/><path d="M516.4 969.7L516.2 964.7" stroke-width="0.7"/><path d="M500.0 970.0L500.0 956.0" stroke-width="1.2"/><path d="M483.6 969.7L483.8 964.7" stroke-width="0.7"/><path d="M467.2 968.9L467.6 963.9" stroke-width="0.7"/><path d="M450.9 967.4L451.4 962.5" stroke-width="0.7"/><path d="M434.6 965.4L435.3 960.5" stroke-width="0.7"/><path d="M418.4 962.9L419.9 954.0" stroke-width="0.7"/><path d="M402.3 959.7L403.3 954.8" stroke-width="0.7"/><path d="M386.3 956.0L387.5 951.2" stroke-width="0.7"/><path d="M370.5 951.8L371.8 947.0" stroke-width="0.7"/><path d="M354.8 947.0L356.3 942.2" stroke-width="0.7"/><path d="M339.3 941.7L342.3 933.2" stroke-width="0.7"/><path d="M323.9 935.8L325.8 931.1" stroke-width="0.7"/><path d="M308.8 929.4L310.9 924.8" stroke-width="0.7"/><path d="M294.0 922.4L296.2 917.9" stroke-width="0.7"/><path d="M279.3 915.0L281.7 910.6" stroke-width="0.7"/><path d="M265.0 907.0L272.0 894.9" stroke-width="1.2"/><path d="M250.9 898.6L253.6 894.3" stroke-width="0.7"/><path d="M237.2 889.6L240.0 885.5" stroke-width="0.7"/><path d="M223.7 880.2L226.7 876.2" stroke-width="0.7"/><path d="M210.6 870.4L213.7 866.4" stroke-width="0.7"/><path d="M197.9 860.0L203.7 853.1" stroke-width="0.7"/><path d="M185.5 849.3L188.9 845.6" stroke-width="0.7"/><path d="M173.5 838.1L177.0 834.5" stroke-width="0.7"/><path d="M161.9 826.5L165.5 823.0" stroke-width="0.7"/><path d="M150.7 814.5L154.4 811.1" stroke-width="0.7"/><path d="M140.0 802.1L146.9 796.3" stroke-width="0.7"/><path d="M129.6 789.4L133.6 786.3" stroke-width="0.7"/><path d="M119.8 776.3L123.8 773.3" stroke-width="0.7"/><path d="M110.4 762.8L114.5 760.0" stroke-width="0.7"/><path d="M101.4 749.1L105.7 746.4" stroke-width="0.7"/><path d="M93.0 735.0L105.1 728.0" stroke-width="1.2"/><path d="M85.0 720.7L89.4 718.3" stroke-width="0.7"/><path d="M77.6 706.0L82.1 703.8" stroke-width="0.7"/><path d="M70.6 691.2L75.2 689.1" stroke-width="0.7"/><path d="M64.2 676.1L68.9 674.2" stroke-width="0.7"/><path d="M58.3 660.7L66.8 657.7" stroke-width="0.7"/><path d="M53.0 645.2L57.8 643.7" stroke-width="0.7"/><path d="M48.2 629.5L53.0 628.2" stroke-width="0.7"/><path d="M44.0 613.7L48.8 612.5" stroke-width="0.7"/><path d="M40.3 597.7L45.2 596.7" stroke-width="0.7"/><path d="M37.1 581.6L46.0 580.1" stroke-width="0.7"/><path d="M34.6 565.4L39.5 564.7" stroke-width="0.7"/><path d="M32.6 549.1L37.5 548.6" stroke-width="0.7"/><path d="M31.1 532.8L36.1 532.4" stroke-width="0.7"/><path d="M30.3 516.4L35.3 516.2" stroke-width="0.7"/><path d="M30.0 500.0L44.0 500.0" stroke-width="1.2"/><path d="M30.3 483.6L35.3 483.8" stroke-width="0.7"/><path d="M31.1 467.2L36.1 467.6" stroke-width="0.7"/><path d="M32.6 450.9L37.5 451.4" stroke-width="0.7"/><path d="M34.6 434.6L39.5 435.3" stroke-width="0.7"/><path d="M37.1 418.4L46.0 419.9" stroke-width="0.7"/><path d="M40.3 402.3L45.2 403.3" stroke-width="0.7"/><path d="M44.0 386.3L48.8 387.5" stroke-width="0.7"/><path d="M48.2 370.5L53.0 371.8" stroke-width="0.7"/><path d="M53.0 354.8L57.8 356.3" stroke-width="0.7"/><path d="M58.3 339.3L66.8 342.3" stroke-width="0.7"/><path d="M64.2 323.9L68.9 325.8" stroke-width="0.7"/><path d="M70.6 308.8L75.2 310.9" stroke-width="0.7"/><path d="M77.6 294.0L82.1 296.2" stroke-width="0.7"/><path d="M85.0 279.3L89.4 281.7" stroke-width="0.7"/><path d="M93.0 265.0L105.1 272.0" stroke-width="1.2"/><path d="M101.4 250.9L105.7 253.6" stroke-width="0.7"/><path d="M110.4 237.2L114.5 240.0" stroke-width="0.7"/><path d="M119.8 223.7L123.8 226.7" stroke-width="0.7"/><path d="M129.6 210.6L133.6 213.7" stroke-width="0.7"/><path d="M140.0 197.9L146.9 203.7" stroke-width="0.7"/><path d="M150.7 185.5L154.4 188.9" stroke-width="0.7"/><path d="M161.9 173.5L165.5 177.0" stroke-width="0.7"/><path d="M173.5 161.9L177.0 165.5" stroke-width="0.7"/><path d="M185.5 150.7L188.9 154.4" stroke-width="0.7"/><path d="M197.9 140.0L203.7 146.9" stroke-width="0.7"/><path d="M210.6 129.6L213.7 133.6" stroke-width="0.7"/><path d="M223.7 119.8L226.7 123.8" stroke-width="0.7"/><path d="M237.2 110.4L240.0 114.5" stroke-width="0.7"/><path d="M250.9 101.4L253.6 105.7" stroke-width="0.7"/><path d="M265.0 93.0L272.0 105.1" stroke-width="1.2"/><path d="M279.3 85.0L281.7 89.4" stroke-width="0.7"/><path d="M294.0 77.6L296.2 82.1" stroke-width="0.7"/><path d="M308.8 70.6L310.9 75.2" stroke-width="0.7"/><path d="M323.9 64.2L325.8 68.9" stroke-width="0.7"/><path d="M339.3 58.3L342.3 66.8" stroke-width="0.7"/><path d="M354.8 53.0L356.3 57.8" stroke-width="0.7"/><path d="M370.5 48.2L371.8 53.0" stroke-width="0.7"/><path d="M386.3 44.0L387.5 48.8" stroke-width="0.7"/><path d="M402.3 40.3L403.3 45.2" stroke-width="0.7"/><path d="M418.4 37.1L419.9 46.0" stroke-width="0.7"/><path d="M434.6 34.6L435.3 39.5" stroke-width="0.7"/><path d="M450.9 32.6L451.4 37.5" stroke-width="0.7"/><path d="M467.2 31.1L467.6 36.1" stroke-width="0.7"/><path d="M483.6 30.3L483.8 35.3" stroke-width="0.7"/><path d="M500.0 30.0L500.0 44.0" stroke-width="1.2"/><path d="M516.4 30.3L516.2 35.3" stroke-width="0.7"/><path d="M532.8 31.1L532.4 36.1" stroke-width="0.7"/><path d="M549.1 32.6L548.6 37.5" stroke-width="0.7"/><path d="M565.4 34.6L564.7 39.5" stroke-width="0.7"/><path d="M581.6 37.1L580.1 46.0" stroke-width="0.7"/><path d="M597.7 40.3L596.7 45.2" stroke-width="0.7"/><path d="M613.7 44.0L612.5 48.8" stroke-width="0.7"/><path d="M629.5 48.2L628.2 53.0" stroke-width="0.7"/><path d="M645.2 53.0L643.7 57.8" stroke-width="0.7"/><path d="M660.7 58.3L657.7 66.8" stroke-width="0.7"/><path d="M676.1 64.2L674.2 68.9" stroke-width="0.7"/><path d="M691.2 70.6L689.1 75.2" stroke-width="0.7"/><path d="M706.0 77.6L703.8 82.1" stroke-width="0.7"/><path d="M720.7 85.0L718.3 89.4" stroke-width="0.7"/><path d="M735.0 93.0L728.0 105.1" stroke-width="1.2"/><path d="M749.1 101.4L746.4 105.7" stroke-width="0.7"/><path d="M762.8 110.4L760.0 114.5" stroke-width="0.7"/><path d="M776.3 119.8L773.3 123.8" stroke-width="0.7"/><path d="M789.4 129.6L786.3 133.6" stroke-width="0.7"/><path d="M802.1 140.0L796.3 146.9" stroke-width="0.7"/><path d="M814.5 150.7L811.1 154.4" stroke-width="0.7"/><path d="M826.5 161.9L823.0 165.5" stroke-width="0.7"/><path d="M838.1 173.5L834.5 177.0" stroke-width="0.7"/><path d="M849.3 185.5L845.6 188.9" stroke-width="0.7"/><path d="M860.0 197.9L853.1 203.7" stroke-width="0.7"/><path d="M870.4 210.6L866.4 213.7" stroke-width="0.7"/><path d="M880.2 223.7L876.2 226.7" stroke-width="0.7"/><path d="M889.6 237.2L885.5 240.0" stroke-width="0.7"/><path d="M898.6 250.9L894.3 253.6" stroke-width="0.7"/><path d="M907.0 265.0L894.9 272.0" stroke-width="1.2"/><path d="M915.0 279.3L910.6 281.7" stroke-width="0.7"/><path d="M922.4 294.0L917.9 296.2" stroke-width="0.7"/><path d="M929.4 308.8L924.8 310.9" stroke-width="0.7"/><path d="M935.8 323.9L931.1 325.8" stroke-width="0.7"/><path d="M941.7 339.3L933.2 342.3" stroke-width="0.7"/><path d="M947.0 354.8L942.2 356.3" stroke-width="0.7"/><path d="M951.8 370.5L947.0 371.8" stroke-width="0.7"/><path d="M956.0 386.3L951.2 387.5" stroke-width="0.7"/><path d="M959.7 402.3L954.8 403.3" stroke-width="0.7"/><path d="M962.9 418.4L954.0 419.9" stroke-width="0.7"/><path d="M965.4 434.6L960.5 435.3" stroke-width="0.7"/><path d="M967.4 450.9L962.5 451.4" stroke-width="0.7"/><path d="M968.9 467.2L963.9 467.6" stroke-width="0.7"/><path d="M969.7 483.6L964.7 483.8" stroke-width="0.7"/><path d="M900.0 500.0L956.0 500.0" stroke-width="1"/><path d="M846.4 700.0L894.9 728.0" stroke-width="1"/><path d="M700.0 846.4L728.0 894.9" stroke-width="1"/><path d="M500.0 900.0L500.0 956.0" stroke-width="1"/><path d="M300.0 846.4L272.0 894.9" stroke-width="1"/><path d="M153.6 700.0L105.1 728.0" stroke-width="1"/><path d="M100.0 500.0L44.0 500.0" stroke-width="1"/><path d="M153.6 300.0L105.1 272.0" stroke-width="1"/><path d="M300.0 153.6L272.0 105.1" stroke-width="1"/><path d="M500.0 100.0L500.0 44.0" stroke-width="1"/><path d="M700.0 153.6L728.0 105.1" stroke-width="1"/><path d="M846.4 300.0L894.9 272.0" stroke-width="1"/><path d="M764.1 556.1L322.9 703.8" stroke-width=".7" opacity=".7"/><path d="M322.9 703.8L407.7 246.3" stroke-width=".7" opacity=".7"/><path d="M407.7 246.3L764.1 556.1" stroke-width=".7" opacity=".7"/><path d="M618.4 742.7L230.7 481.2" stroke-width=".7" stroke-dasharray="4 5" opacity=".7"/></g><g class="zw-spin" fill="#dcfffb" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif" text-anchor="middle"><text x="913.4" y="623.8" font-size="38">♈︎</text><text x="802.6" y="815.6" font-size="38">♉︎</text><text x="610.8" y="926.4" font-size="38">♊︎</text><text x="389.2" y="926.4" font-size="38">♋︎</text><text x="197.4" y="815.6" font-size="38">♌︎</text><text x="86.6" y="623.8" font-size="38">♍︎</text><text x="86.6" y="402.2" font-size="38">♎︎</text><text x="197.4" y="210.4" font-size="38">♏︎</text><text x="389.2" y="99.6" font-size="38">♐︎</text><text x="610.8" y="99.6" font-size="38">♑︎</text><text x="802.6" y="210.4" font-size="38">♒︎</text><text x="913.4" y="402.2" font-size="38">♓︎</text><text x="797.1" y="550.8" font-size="26" opacity=".85">☉︎</text><text x="715.8" y="717.4" font-size="26" opacity=".85">☽︎</text><text x="552.1" y="804.4" font-size="26" opacity=".85">☿︎</text><text x="368.5" y="778.6" font-size="26" opacity=".85">♀︎</text><text x="235.1" y="649.8" font-size="26" opacity=".85">♂︎</text><text x="202.9" y="467.2" font-size="26" opacity=".85">♃︎</text><text x="284.2" y="300.6" font-size="26" opacity=".85">♄︎</text><text x="447.9" y="213.6" font-size="26" opacity=".85">♅︎</text><text x="631.5" y="239.4" font-size="26" opacity=".85">♆︎</text><text x="764.9" y="368.2" font-size="26" opacity=".85">♇︎</text></g></svg></div>
+  <div class="zwrap"><svg class="zwheel" viewBox="0 0 1000 1000" aria-hidden="true"><g class="zw-spin" fill="none" stroke="#d0efff" stroke-linecap="round"><circle cx="500" cy="500" r="470" stroke-width="1.6"/><circle cx="500" cy="500" r="456" stroke-width=".8"/><circle cx="500" cy="500" r="400" stroke-width="1.2"/><circle cx="500" cy="500" r="330" stroke-width=".8" stroke-dasharray="2 7"/><circle cx="500" cy="500" r="270" stroke-width=".6"/><path d="M970.0 500.0L956.0 500.0" stroke-width="1.2"/><path d="M969.7 516.4L964.7 516.2" stroke-width="0.7"/><path d="M968.9 532.8L963.9 532.4" stroke-width="0.7"/><path d="M967.4 549.1L962.5 548.6" stroke-width="0.7"/><path d="M965.4 565.4L960.5 564.7" stroke-width="0.7"/><path d="M962.9 581.6L954.0 580.1" stroke-width="0.7"/><path d="M959.7 597.7L954.8 596.7" stroke-width="0.7"/><path d="M956.0 613.7L951.2 612.5" stroke-width="0.7"/><path d="M951.8 629.5L947.0 628.2" stroke-width="0.7"/><path d="M947.0 645.2L942.2 643.7" stroke-width="0.7"/><path d="M941.7 660.7L933.2 657.7" stroke-width="0.7"/><path d="M935.8 676.1L931.1 674.2" stroke-width="0.7"/><path d="M929.4 691.2L924.8 689.1" stroke-width="0.7"/><path d="M922.4 706.0L917.9 703.8" stroke-width="0.7"/><path d="M915.0 720.7L910.6 718.3" stroke-width="0.7"/><path d="M907.0 735.0L894.9 728.0" stroke-width="1.2"/><path d="M898.6 749.1L894.3 746.4" stroke-width="0.7"/><path d="M889.6 762.8L885.5 760.0" stroke-width="0.7"/><path d="M880.2 776.3L876.2 773.3" stroke-width="0.7"/><path d="M870.4 789.4L866.4 786.3" stroke-width="0.7"/><path d="M860.0 802.1L853.1 796.3" stroke-width="0.7"/><path d="M849.3 814.5L845.6 811.1" stroke-width="0.7"/><path d="M838.1 826.5L834.5 823.0" stroke-width="0.7"/><path d="M826.5 838.1L823.0 834.5" stroke-width="0.7"/><path d="M814.5 849.3L811.1 845.6" stroke-width="0.7"/><path d="M802.1 860.0L796.3 853.1" stroke-width="0.7"/><path d="M789.4 870.4L786.3 866.4" stroke-width="0.7"/><path d="M776.3 880.2L773.3 876.2" stroke-width="0.7"/><path d="M762.8 889.6L760.0 885.5" stroke-width="0.7"/><path d="M749.1 898.6L746.4 894.3" stroke-width="0.7"/><path d="M735.0 907.0L728.0 894.9" stroke-width="1.2"/><path d="M720.7 915.0L718.3 910.6" stroke-width="0.7"/><path d="M706.0 922.4L703.8 917.9" stroke-width="0.7"/><path d="M691.2 929.4L689.1 924.8" stroke-width="0.7"/><path d="M676.1 935.8L674.2 931.1" stroke-width="0.7"/><path d="M660.7 941.7L657.7 933.2" stroke-width="0.7"/><path d="M645.2 947.0L643.7 942.2" stroke-width="0.7"/><path d="M629.5 951.8L628.2 947.0" stroke-width="0.7"/><path d="M613.7 956.0L612.5 951.2" stroke-width="0.7"/><path d="M597.7 959.7L596.7 954.8" stroke-width="0.7"/><path d="M581.6 962.9L580.1 954.0" stroke-width="0.7"/><path d="M565.4 965.4L564.7 960.5" stroke-width="0.7"/><path d="M549.1 967.4L548.6 962.5" stroke-width="0.7"/><path d="M532.8 968.9L532.4 963.9" stroke-width="0.7"/><path d="M516.4 969.7L516.2 964.7" stroke-width="0.7"/><path d="M500.0 970.0L500.0 956.0" stroke-width="1.2"/><path d="M483.6 969.7L483.8 964.7" stroke-width="0.7"/><path d="M467.2 968.9L467.6 963.9" stroke-width="0.7"/><path d="M450.9 967.4L451.4 962.5" stroke-width="0.7"/><path d="M434.6 965.4L435.3 960.5" stroke-width="0.7"/><path d="M418.4 962.9L419.9 954.0" stroke-width="0.7"/><path d="M402.3 959.7L403.3 954.8" stroke-width="0.7"/><path d="M386.3 956.0L387.5 951.2" stroke-width="0.7"/><path d="M370.5 951.8L371.8 947.0" stroke-width="0.7"/><path d="M354.8 947.0L356.3 942.2" stroke-width="0.7"/><path d="M339.3 941.7L342.3 933.2" stroke-width="0.7"/><path d="M323.9 935.8L325.8 931.1" stroke-width="0.7"/><path d="M308.8 929.4L310.9 924.8" stroke-width="0.7"/><path d="M294.0 922.4L296.2 917.9" stroke-width="0.7"/><path d="M279.3 915.0L281.7 910.6" stroke-width="0.7"/><path d="M265.0 907.0L272.0 894.9" stroke-width="1.2"/><path d="M250.9 898.6L253.6 894.3" stroke-width="0.7"/><path d="M237.2 889.6L240.0 885.5" stroke-width="0.7"/><path d="M223.7 880.2L226.7 876.2" stroke-width="0.7"/><path d="M210.6 870.4L213.7 866.4" stroke-width="0.7"/><path d="M197.9 860.0L203.7 853.1" stroke-width="0.7"/><path d="M185.5 849.3L188.9 845.6" stroke-width="0.7"/><path d="M173.5 838.1L177.0 834.5" stroke-width="0.7"/><path d="M161.9 826.5L165.5 823.0" stroke-width="0.7"/><path d="M150.7 814.5L154.4 811.1" stroke-width="0.7"/><path d="M140.0 802.1L146.9 796.3" stroke-width="0.7"/><path d="M129.6 789.4L133.6 786.3" stroke-width="0.7"/><path d="M119.8 776.3L123.8 773.3" stroke-width="0.7"/><path d="M110.4 762.8L114.5 760.0" stroke-width="0.7"/><path d="M101.4 749.1L105.7 746.4" stroke-width="0.7"/><path d="M93.0 735.0L105.1 728.0" stroke-width="1.2"/><path d="M85.0 720.7L89.4 718.3" stroke-width="0.7"/><path d="M77.6 706.0L82.1 703.8" stroke-width="0.7"/><path d="M70.6 691.2L75.2 689.1" stroke-width="0.7"/><path d="M64.2 676.1L68.9 674.2" stroke-width="0.7"/><path d="M58.3 660.7L66.8 657.7" stroke-width="0.7"/><path d="M53.0 645.2L57.8 643.7" stroke-width="0.7"/><path d="M48.2 629.5L53.0 628.2" stroke-width="0.7"/><path d="M44.0 613.7L48.8 612.5" stroke-width="0.7"/><path d="M40.3 597.7L45.2 596.7" stroke-width="0.7"/><path d="M37.1 581.6L46.0 580.1" stroke-width="0.7"/><path d="M34.6 565.4L39.5 564.7" stroke-width="0.7"/><path d="M32.6 549.1L37.5 548.6" stroke-width="0.7"/><path d="M31.1 532.8L36.1 532.4" stroke-width="0.7"/><path d="M30.3 516.4L35.3 516.2" stroke-width="0.7"/><path d="M30.0 500.0L44.0 500.0" stroke-width="1.2"/><path d="M30.3 483.6L35.3 483.8" stroke-width="0.7"/><path d="M31.1 467.2L36.1 467.6" stroke-width="0.7"/><path d="M32.6 450.9L37.5 451.4" stroke-width="0.7"/><path d="M34.6 434.6L39.5 435.3" stroke-width="0.7"/><path d="M37.1 418.4L46.0 419.9" stroke-width="0.7"/><path d="M40.3 402.3L45.2 403.3" stroke-width="0.7"/><path d="M44.0 386.3L48.8 387.5" stroke-width="0.7"/><path d="M48.2 370.5L53.0 371.8" stroke-width="0.7"/><path d="M53.0 354.8L57.8 356.3" stroke-width="0.7"/><path d="M58.3 339.3L66.8 342.3" stroke-width="0.7"/><path d="M64.2 323.9L68.9 325.8" stroke-width="0.7"/><path d="M70.6 308.8L75.2 310.9" stroke-width="0.7"/><path d="M77.6 294.0L82.1 296.2" stroke-width="0.7"/><path d="M85.0 279.3L89.4 281.7" stroke-width="0.7"/><path d="M93.0 265.0L105.1 272.0" stroke-width="1.2"/><path d="M101.4 250.9L105.7 253.6" stroke-width="0.7"/><path d="M110.4 237.2L114.5 240.0" stroke-width="0.7"/><path d="M119.8 223.7L123.8 226.7" stroke-width="0.7"/><path d="M129.6 210.6L133.6 213.7" stroke-width="0.7"/><path d="M140.0 197.9L146.9 203.7" stroke-width="0.7"/><path d="M150.7 185.5L154.4 188.9" stroke-width="0.7"/><path d="M161.9 173.5L165.5 177.0" stroke-width="0.7"/><path d="M173.5 161.9L177.0 165.5" stroke-width="0.7"/><path d="M185.5 150.7L188.9 154.4" stroke-width="0.7"/><path d="M197.9 140.0L203.7 146.9" stroke-width="0.7"/><path d="M210.6 129.6L213.7 133.6" stroke-width="0.7"/><path d="M223.7 119.8L226.7 123.8" stroke-width="0.7"/><path d="M237.2 110.4L240.0 114.5" stroke-width="0.7"/><path d="M250.9 101.4L253.6 105.7" stroke-width="0.7"/><path d="M265.0 93.0L272.0 105.1" stroke-width="1.2"/><path d="M279.3 85.0L281.7 89.4" stroke-width="0.7"/><path d="M294.0 77.6L296.2 82.1" stroke-width="0.7"/><path d="M308.8 70.6L310.9 75.2" stroke-width="0.7"/><path d="M323.9 64.2L325.8 68.9" stroke-width="0.7"/><path d="M339.3 58.3L342.3 66.8" stroke-width="0.7"/><path d="M354.8 53.0L356.3 57.8" stroke-width="0.7"/><path d="M370.5 48.2L371.8 53.0" stroke-width="0.7"/><path d="M386.3 44.0L387.5 48.8" stroke-width="0.7"/><path d="M402.3 40.3L403.3 45.2" stroke-width="0.7"/><path d="M418.4 37.1L419.9 46.0" stroke-width="0.7"/><path d="M434.6 34.6L435.3 39.5" stroke-width="0.7"/><path d="M450.9 32.6L451.4 37.5" stroke-width="0.7"/><path d="M467.2 31.1L467.6 36.1" stroke-width="0.7"/><path d="M483.6 30.3L483.8 35.3" stroke-width="0.7"/><path d="M500.0 30.0L500.0 44.0" stroke-width="1.2"/><path d="M516.4 30.3L516.2 35.3" stroke-width="0.7"/><path d="M532.8 31.1L532.4 36.1" stroke-width="0.7"/><path d="M549.1 32.6L548.6 37.5" stroke-width="0.7"/><path d="M565.4 34.6L564.7 39.5" stroke-width="0.7"/><path d="M581.6 37.1L580.1 46.0" stroke-width="0.7"/><path d="M597.7 40.3L596.7 45.2" stroke-width="0.7"/><path d="M613.7 44.0L612.5 48.8" stroke-width="0.7"/><path d="M629.5 48.2L628.2 53.0" stroke-width="0.7"/><path d="M645.2 53.0L643.7 57.8" stroke-width="0.7"/><path d="M660.7 58.3L657.7 66.8" stroke-width="0.7"/><path d="M676.1 64.2L674.2 68.9" stroke-width="0.7"/><path d="M691.2 70.6L689.1 75.2" stroke-width="0.7"/><path d="M706.0 77.6L703.8 82.1" stroke-width="0.7"/><path d="M720.7 85.0L718.3 89.4" stroke-width="0.7"/><path d="M735.0 93.0L728.0 105.1" stroke-width="1.2"/><path d="M749.1 101.4L746.4 105.7" stroke-width="0.7"/><path d="M762.8 110.4L760.0 114.5" stroke-width="0.7"/><path d="M776.3 119.8L773.3 123.8" stroke-width="0.7"/><path d="M789.4 129.6L786.3 133.6" stroke-width="0.7"/><path d="M802.1 140.0L796.3 146.9" stroke-width="0.7"/><path d="M814.5 150.7L811.1 154.4" stroke-width="0.7"/><path d="M826.5 161.9L823.0 165.5" stroke-width="0.7"/><path d="M838.1 173.5L834.5 177.0" stroke-width="0.7"/><path d="M849.3 185.5L845.6 188.9" stroke-width="0.7"/><path d="M860.0 197.9L853.1 203.7" stroke-width="0.7"/><path d="M870.4 210.6L866.4 213.7" stroke-width="0.7"/><path d="M880.2 223.7L876.2 226.7" stroke-width="0.7"/><path d="M889.6 237.2L885.5 240.0" stroke-width="0.7"/><path d="M898.6 250.9L894.3 253.6" stroke-width="0.7"/><path d="M907.0 265.0L894.9 272.0" stroke-width="1.2"/><path d="M915.0 279.3L910.6 281.7" stroke-width="0.7"/><path d="M922.4 294.0L917.9 296.2" stroke-width="0.7"/><path d="M929.4 308.8L924.8 310.9" stroke-width="0.7"/><path d="M935.8 323.9L931.1 325.8" stroke-width="0.7"/><path d="M941.7 339.3L933.2 342.3" stroke-width="0.7"/><path d="M947.0 354.8L942.2 356.3" stroke-width="0.7"/><path d="M951.8 370.5L947.0 371.8" stroke-width="0.7"/><path d="M956.0 386.3L951.2 387.5" stroke-width="0.7"/><path d="M959.7 402.3L954.8 403.3" stroke-width="0.7"/><path d="M962.9 418.4L954.0 419.9" stroke-width="0.7"/><path d="M965.4 434.6L960.5 435.3" stroke-width="0.7"/><path d="M967.4 450.9L962.5 451.4" stroke-width="0.7"/><path d="M968.9 467.2L963.9 467.6" stroke-width="0.7"/><path d="M969.7 483.6L964.7 483.8" stroke-width="0.7"/><path d="M900.0 500.0L956.0 500.0" stroke-width="1"/><path d="M846.4 700.0L894.9 728.0" stroke-width="1"/><path d="M700.0 846.4L728.0 894.9" stroke-width="1"/><path d="M500.0 900.0L500.0 956.0" stroke-width="1"/><path d="M300.0 846.4L272.0 894.9" stroke-width="1"/><path d="M153.6 700.0L105.1 728.0" stroke-width="1"/><path d="M100.0 500.0L44.0 500.0" stroke-width="1"/><path d="M153.6 300.0L105.1 272.0" stroke-width="1"/><path d="M300.0 153.6L272.0 105.1" stroke-width="1"/><path d="M500.0 100.0L500.0 44.0" stroke-width="1"/><path d="M700.0 153.6L728.0 105.1" stroke-width="1"/><path d="M846.4 300.0L894.9 272.0" stroke-width="1"/><path d="M764.1 556.1L322.9 703.8" stroke-width=".7" opacity=".7"/><path d="M322.9 703.8L407.7 246.3" stroke-width=".7" opacity=".7"/><path d="M407.7 246.3L764.1 556.1" stroke-width=".7" opacity=".7"/><path d="M618.4 742.7L230.7 481.2" stroke-width=".7" stroke-dasharray="4 5" opacity=".7"/></g><g class="zw-spin" fill="#dcf3ff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif" text-anchor="middle"><text x="913.4" y="623.8" font-size="38">♈︎</text><text x="802.6" y="815.6" font-size="38">♉︎</text><text x="610.8" y="926.4" font-size="38">♊︎</text><text x="389.2" y="926.4" font-size="38">♋︎</text><text x="197.4" y="815.6" font-size="38">♌︎</text><text x="86.6" y="623.8" font-size="38">♍︎</text><text x="86.6" y="402.2" font-size="38">♎︎</text><text x="197.4" y="210.4" font-size="38">♏︎</text><text x="389.2" y="99.6" font-size="38">♐︎</text><text x="610.8" y="99.6" font-size="38">♑︎</text><text x="802.6" y="210.4" font-size="38">♒︎</text><text x="913.4" y="402.2" font-size="38">♓︎</text><text x="797.1" y="550.8" font-size="26" opacity=".85">☉︎</text><text x="715.8" y="717.4" font-size="26" opacity=".85">☽︎</text><text x="552.1" y="804.4" font-size="26" opacity=".85">☿︎</text><text x="368.5" y="778.6" font-size="26" opacity=".85">♀︎</text><text x="235.1" y="649.8" font-size="26" opacity=".85">♂︎</text><text x="202.9" y="467.2" font-size="26" opacity=".85">♃︎</text><text x="284.2" y="300.6" font-size="26" opacity=".85">♄︎</text><text x="447.9" y="213.6" font-size="26" opacity=".85">♅︎</text><text x="631.5" y="239.4" font-size="26" opacity=".85">♆︎</text><text x="764.9" y="368.2" font-size="26" opacity=".85">♇︎</text></g></svg></div>
   <svg class="orn hide-sm" style="width:150px;left:30%;top:9%;opacity:.8" aria-hidden="true"><use href="#constel-a"/></svg>
   <div class="wrap hero-grid">
     <div style="position:relative;z-index:1">
@@ -533,7 +533,7 @@ h1,h2{letter-spacing:-.012em}
 
     <div class="portal rv" id="portal">
       <div class="portal-inner">
-        <div class="sky-fallback"><svg class="fb-orrery" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="fbCoin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#68d3c6"/><stop offset=".36" stop-color="#4db2a7"/><stop offset=".68" stop-color="#62bab2"/><stop offset="1" stop-color="#84d1ce"/></linearGradient><radialGradient id="fbShine" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="fbGold" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f5ffff"/><stop offset=".6" stop-color="#c3f1f0"/><stop offset="1" stop-color="#7dcac1"/></radialGradient><radialGradient id="fbGlow"><stop offset="0" stop-color="#e6fffe" stop-opacity=".95"/><stop offset="1" stop-color="#e6fffe" stop-opacity="0"/></radialGradient></defs><ellipse cx="200" cy="206" rx="172" ry="76" fill="none" stroke="#8fdad1" stroke-width="1.1"/><ellipse cx="200" cy="206" rx="128" ry="52" fill="none" stroke="#8fdad1" stroke-width=".9"/><ellipse cx="200" cy="206" rx="178" ry="79" fill="none" stroke="#8fdad1" stroke-width=".7" stroke-dasharray="1 4"/><ellipse cx="200" cy="206" rx="46" ry="20" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="6" fill="#f3fffd"/><circle r="6" fill="url(#fbShine)"/><animateMotion dur="9s" begin="0s" repeatCount="indefinite" path="M154 206a46 20 0 1 0 92 0a46 20 0 1 0 -92 0"/></g><ellipse cx="200" cy="206" rx="62" ry="27" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="4.5" fill="#bbf3eb"/><circle r="4.5" fill="url(#fbShine)"/><animateMotion dur="12s" begin="-3s" repeatCount="indefinite" path="M138 206a62 27 0 1 0 124 0a62 27 0 1 0 -124 0"/></g><ellipse cx="200" cy="206" rx="78" ry="34" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="7" fill="#c1f1f0"/><circle r="7" fill="url(#fbShine)"/><animateMotion dur="16s" begin="-7s" repeatCount="indefinite" path="M122 206a78 34 0 1 0 156 0a78 34 0 1 0 -156 0"/></g><ellipse cx="200" cy="206" rx="94" ry="41" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="6" fill="#a4e8e6"/><circle r="6" fill="url(#fbShine)"/><animateMotion dur="21s" begin="-2s" repeatCount="indefinite" path="M106 206a94 41 0 1 0 188 0a94 41 0 1 0 -188 0"/></g><ellipse cx="200" cy="206" rx="184" ry="82" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="12" fill="#b7ede8"/><circle r="12" fill="url(#fbShine)"/><animateMotion dur="38s" begin="-11s" repeatCount="indefinite" path="M16 206a184 82 0 1 0 368 0a184 82 0 1 0 -368 0"/></g><ellipse cx="200" cy="206" rx="206" ry="92" fill="none" stroke="#8fdad1" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="10" fill="#def3f3"/><circle r="10" fill="url(#fbShine)"/><animateMotion dur="52s" begin="-30s" repeatCount="indefinite" path="M-6 206a206 92 0 1 0 412 0a206 92 0 1 0 -412 0"/></g><circle cx="200" cy="198" r="58" fill="url(#fbGlow)"><animate attributeName="r" values="52;62;52" dur="4s" repeatCount="indefinite"/></circle><g transform="translate(200 198)"><g><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(0.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(22.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(45.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(67.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(90.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(112.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(135.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(157.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(180.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(202.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(225.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(247.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(270.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(292.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(315.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(337.5)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/></g><circle r="26" fill="url(#fbGold)" stroke="#5db2a9" stroke-width="1.2"/><path d="M-12-2q4 4 8 0M4-2q4 4 8 0M-7 8q7 6 14 0" stroke="#43988e" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="-17" cy="7" r="4" fill="#8ae3e3" opacity=".45"/><circle cx="17" cy="7" r="4" fill="#8ae3e3" opacity=".45"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♈︎</text><animateMotion dur="48s" begin="0.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♉︎</text><animateMotion dur="48s" begin="-4.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♊︎</text><animateMotion dur="48s" begin="-8.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♋︎</text><animateMotion dur="48s" begin="-12.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♌︎</text><animateMotion dur="48s" begin="-16.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♍︎</text><animateMotion dur="48s" begin="-20.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♎︎</text><animateMotion dur="48s" begin="-24.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♏︎</text><animateMotion dur="48s" begin="-28.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♐︎</text><animateMotion dur="48s" begin="-32.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♑︎</text><animateMotion dur="48s" begin="-36.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♒︎</text><animateMotion dur="48s" begin="-40.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♓︎</text><animateMotion dur="48s" begin="-44.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g></svg></div>
+        <div class="sky-fallback"><svg class="fb-orrery" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="fbCoin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#36b1f2"/><stop offset=".36" stop-color="#0e93da"/><stop offset=".68" stop-color="#0f9be8"/><stop offset="1" stop-color="#40b2f3"/></linearGradient><radialGradient id="fbShine" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="fbGold" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f5fbff"/><stop offset=".6" stop-color="#8dd1f8"/><stop offset="1" stop-color="#29acf1"/></radialGradient><radialGradient id="fbGlow"><stop offset="0" stop-color="#e6f6ff" stop-opacity=".95"/><stop offset="1" stop-color="#e6f6ff" stop-opacity="0"/></radialGradient></defs><ellipse cx="200" cy="206" rx="172" ry="76" fill="none" stroke="#4fbbf4" stroke-width="1.1"/><ellipse cx="200" cy="206" rx="128" ry="52" fill="none" stroke="#4fbbf4" stroke-width=".9"/><ellipse cx="200" cy="206" rx="178" ry="79" fill="none" stroke="#4fbbf4" stroke-width=".7" stroke-dasharray="1 4"/><ellipse cx="200" cy="206" rx="46" ry="20" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="6" fill="#f3fbff"/><circle r="6" fill="url(#fbShine)"/><animateMotion dur="9s" begin="0s" repeatCount="indefinite" path="M154 206a46 20 0 1 0 92 0a46 20 0 1 0 -92 0"/></g><ellipse cx="200" cy="206" rx="62" ry="27" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="4.5" fill="#8ad2f8"/><circle r="4.5" fill="url(#fbShine)"/><animateMotion dur="12s" begin="-3s" repeatCount="indefinite" path="M138 206a62 27 0 1 0 124 0a62 27 0 1 0 -124 0"/></g><ellipse cx="200" cy="206" rx="78" ry="34" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="7" fill="#8dd1f8"/><circle r="7" fill="url(#fbShine)"/><animateMotion dur="16s" begin="-7s" repeatCount="indefinite" path="M122 206a78 34 0 1 0 156 0a78 34 0 1 0 -156 0"/></g><ellipse cx="200" cy="206" rx="94" ry="41" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="6" fill="#74c7f6"/><circle r="6" fill="url(#fbShine)"/><animateMotion dur="21s" begin="-2s" repeatCount="indefinite" path="M106 206a94 41 0 1 0 188 0a94 41 0 1 0 -188 0"/></g><ellipse cx="200" cy="206" rx="184" ry="82" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="12" fill="#80cdf7"/><circle r="12" fill="url(#fbShine)"/><animateMotion dur="38s" begin="-11s" repeatCount="indefinite" path="M16 206a184 82 0 1 0 368 0a184 82 0 1 0 -368 0"/></g><ellipse cx="200" cy="206" rx="206" ry="92" fill="none" stroke="#4fbbf4" stroke-width=".8" stroke-dasharray="2 4" opacity=".45"/><g><circle r="10" fill="#deebf3"/><circle r="10" fill="url(#fbShine)"/><animateMotion dur="52s" begin="-30s" repeatCount="indefinite" path="M-6 206a206 92 0 1 0 412 0a206 92 0 1 0 -412 0"/></g><circle cx="200" cy="198" r="58" fill="url(#fbGlow)"><animate attributeName="r" values="52;62;52" dur="4s" repeatCount="indefinite"/></circle><g transform="translate(200 198)"><g><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(0.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(22.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(45.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(67.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(90.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(112.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(135.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(157.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(180.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(202.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(225.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(247.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(270.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(292.5)"/><path d="M-5 -26Q0 -44 0 -48Q0 -44 5 -26z" fill="url(#fbGold)" transform="rotate(315.0)"/><path d="M-5 -26Q0 -34 0 -38Q0 -34 5 -26z" fill="url(#fbGold)" transform="rotate(337.5)"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/></g><circle r="26" fill="url(#fbGold)" stroke="#0e95dd" stroke-width="1.2"/><path d="M-12-2q4 4 8 0M4-2q4 4 8 0M-7 8q7 6 14 0" stroke="#0c7eba" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="-17" cy="7" r="4" fill="#66c1f5" opacity=".45"/><circle cx="17" cy="7" r="4" fill="#66c1f5" opacity=".45"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♈︎</text><animateMotion dur="48s" begin="0.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♉︎</text><animateMotion dur="48s" begin="-4.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♊︎</text><animateMotion dur="48s" begin="-8.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♋︎</text><animateMotion dur="48s" begin="-12.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♌︎</text><animateMotion dur="48s" begin="-16.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♍︎</text><animateMotion dur="48s" begin="-20.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♎︎</text><animateMotion dur="48s" begin="-24.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♏︎</text><animateMotion dur="48s" begin="-28.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♐︎</text><animateMotion dur="48s" begin="-32.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♑︎</text><animateMotion dur="48s" begin="-36.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♒︎</text><animateMotion dur="48s" begin="-40.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g><g><circle r="17" fill="url(#fbCoin)"/><circle r="17" fill="url(#fbShine)"/><circle r="13.5" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><text y="6" text-anchor="middle" font-size="17" fill="#fff" font-family="Apple Symbols,Segoe UI Symbol,Noto Sans Symbols 2,serif">♓︎</text><animateMotion dur="48s" begin="-44.00s" repeatCount="indefinite" path="M50 206a150 64 0 1 0 300 0a150 64 0 1 0 -300 0"/></g></svg></div>
         <div class="sky-why" id="skyWhy"></div>
         <canvas id="sky" aria-label="An interactive zodiac wheel. Drag to turn it, tap a sign to learn about it."></canvas>
         <div class="sign-card" id="signCard" role="status" aria-live="polite">
@@ -566,7 +566,7 @@ h1,h2{letter-spacing:-.012em}
       <p>Everybody carries one. Tap the one that made you pause, and see the reading written for it.</p>
     </div>
     <div class="picker rv">
-      <input type="radio" name="q" id="q0" checked><input type="radio" name="q" id="q1"><input type="radio" name="q" id="q2"><input type="radio" name="q" id="q3"><input type="radio" name="q" id="q4"><input type="radio" name="q" id="q5"><div class="qs"><label class="q" for="q0"><span class="qi"><svg viewBox="0 0 40 40"><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="url(#gR)" opacity=".3"/><path d="M14 9a8 8 0 1 0 6 13A6.5 6.5 0 1 1 14 9z" fill="url(#gR)"/><path d="M26 9a8 8 0 1 1-6 13A6.5 6.5 0 1 0 26 9z" fill="url(#gV)"/><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="none" stroke="#80cec5" stroke-width="1.2"/></svg></span>Why do I keep meeting the same kind of love?</label><label class="q" for="q1"><span class="qi"><svg viewBox="0 0 40 40"><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="url(#gS)" opacity=".35"/><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="none" stroke="#80cec5" stroke-width="1.4" stroke-linecap="round"/><path d="M16 35q2-7 4-10t4-10" stroke="#6ab0a7" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/><path d="M24 8c.3 2.4.8 3.6 4 4-3.2.4-3.7 1.6-4 4-.3-2.4-.8-3.6-4-4 3.2-.4 3.7-1.6 4-4z" fill="url(#gG)"/></svg></span>Why has my best skill started to feel so flat?</label><label class="q" for="q2"><span class="qi"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gG)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#80cec5" stroke-width="1.3"/><circle cx="20" cy="20" r="12" fill="none" stroke="#80cec5" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M20 6l3.5 14L20 34l-3.5-14z" fill="url(#gP)"/><path d="M20 6l3.5 14h-7z" fill="url(#gV)"/><circle cx="20" cy="20" r="2.2" fill="#fff" stroke="#80cec5"/></svg></span>Where is my money actually supposed to come from?</label><label class="q" for="q3"><span class="qi"><svg viewBox="0 0 40 40"><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="url(#gV)" opacity=".35"/><path d="M15 15q2-2 4 0M21 15q2-2 4 0M15 23q5 4 10 0" stroke="#6ab0a7" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="none" stroke="#80cec5" stroke-width="1.3"/><path d="M33 2c.3 2.6.8 4 4.5 4.5C33.8 7 33.3 8.4 33 11c-.3-2.6-.8-4-4.5-4.5C32.2 6 32.7 4.6 33 2z" fill="url(#gG)"/></svg></span>Why haven’t I changed, after all these years of trying?</label><label class="q" for="q4"><span class="qi"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gS)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#80cec5" stroke-width="1.3"/><path d="M8 20q12-11 24 0q-12 11-24 0z" fill="#fff" stroke="#6ab0a7" stroke-width="1.5"/><circle cx="20" cy="20" r="4.4" fill="url(#gV)"/><circle cx="21.5" cy="18.6" r="1.3" fill="#fff"/></svg></span>I just want my chart explained, simply.</label><label class="q" for="q5"><span class="qi"><svg viewBox="0 0 40 40"><path d="M5 31q15-6 30 0l-3 3H8z" fill="url(#gS)"/><path d="M11 30L21 5l8 25" fill="url(#gV)" opacity=".85"/><path d="M21 5c3 3 5 3 8 1" stroke="#84cac2" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M5 31q15-6 30 0" fill="none" stroke="#80cec5" stroke-width="1.1"/><path d="M18 20a4 4 0 1 0 4.5 5A3.2 3.2 0 1 1 18 20z" fill="#e3fcf9"/><path d="M25 13l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#fff"/></svg></span>I want to learn to read it myself.</label></div><div class="answers"><div class="answer card" id="a0">
+      <input type="radio" name="q" id="q0" checked><input type="radio" name="q" id="q1"><input type="radio" name="q" id="q2"><input type="radio" name="q" id="q3"><input type="radio" name="q" id="q4"><input type="radio" name="q" id="q5"><div class="qs"><label class="q" for="q0"><span class="qi"><svg viewBox="0 0 40 40"><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="url(#gR)" opacity=".3"/><path d="M14 9a8 8 0 1 0 6 13A6.5 6.5 0 1 1 14 9z" fill="url(#gR)"/><path d="M26 9a8 8 0 1 1-6 13A6.5 6.5 0 1 0 26 9z" fill="url(#gV)"/><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="none" stroke="#33b0f2" stroke-width="1.2"/></svg></span>Why do I keep meeting the same kind of love?</label><label class="q" for="q1"><span class="qi"><svg viewBox="0 0 40 40"><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="url(#gS)" opacity=".35"/><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="none" stroke="#33b0f2" stroke-width="1.4" stroke-linecap="round"/><path d="M16 35q2-7 4-10t4-10" stroke="#0e94dc" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/><path d="M24 8c.3 2.4.8 3.6 4 4-3.2.4-3.7 1.6-4 4-.3-2.4-.8-3.6-4-4 3.2-.4 3.7-1.6 4-4z" fill="url(#gG)"/></svg></span>Why has my best skill started to feel so flat?</label><label class="q" for="q2"><span class="qi"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gG)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#33b0f2" stroke-width="1.3"/><circle cx="20" cy="20" r="12" fill="none" stroke="#33b0f2" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M20 6l3.5 14L20 34l-3.5-14z" fill="url(#gP)"/><path d="M20 6l3.5 14h-7z" fill="url(#gV)"/><circle cx="20" cy="20" r="2.2" fill="#fff" stroke="#33b0f2"/></svg></span>Where is my money actually supposed to come from?</label><label class="q" for="q3"><span class="qi"><svg viewBox="0 0 40 40"><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="url(#gV)" opacity=".35"/><path d="M15 15q2-2 4 0M21 15q2-2 4 0M15 23q5 4 10 0" stroke="#0e94dc" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="none" stroke="#33b0f2" stroke-width="1.3"/><path d="M33 2c.3 2.6.8 4 4.5 4.5C33.8 7 33.3 8.4 33 11c-.3-2.6-.8-4-4.5-4.5C32.2 6 32.7 4.6 33 2z" fill="url(#gG)"/></svg></span>Why haven’t I changed, after all these years of trying?</label><label class="q" for="q4"><span class="qi"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gS)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#33b0f2" stroke-width="1.3"/><path d="M8 20q12-11 24 0q-12 11-24 0z" fill="#fff" stroke="#0e94dc" stroke-width="1.5"/><circle cx="20" cy="20" r="4.4" fill="url(#gV)"/><circle cx="21.5" cy="18.6" r="1.3" fill="#fff"/></svg></span>I just want my chart explained, simply.</label><label class="q" for="q5"><span class="qi"><svg viewBox="0 0 40 40"><path d="M5 31q15-6 30 0l-3 3H8z" fill="url(#gS)"/><path d="M11 30L21 5l8 25" fill="url(#gV)" opacity=".85"/><path d="M21 5c3 3 5 3 8 1" stroke="#2cadf2" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M5 31q15-6 30 0" fill="none" stroke="#33b0f2" stroke-width="1.1"/><path d="M18 20a4 4 0 1 0 4.5 5A3.2 3.2 0 1 1 18 20z" fill="#e3f3fc"/><path d="M25 13l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#fff"/></svg></span>I want to learn to read it myself.</label></div><div class="answers"><div class="answer card" id="a0">
         <a class="a-cover" href="https://beyondthesymbol.gumroad.com/l/beloved" target="_blank" rel="noopener"><img src="assets/cover-beloved.jpg" alt="Beloved cover" loading="lazy"></a>
         <div class="a-kicker">The reading for this question</div>
         <h3>Beloved</h3><p>Someone walks in and your whole body says <em>I know you</em>. This is how to read why.</p>
@@ -602,7 +602,7 @@ h1,h2{letter-spacing:-.012em}
 </section>
 
 <!-- ================= READINGS ================= -->
-<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #091716"></i><i style="box-shadow:inset 18px 0 0 #091716"></i><i style="box-shadow:inset 10px 0 0 #091716"></i><i style="box-shadow:inset 4px 0 0 #091716"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #091716"></i><i style="box-shadow:inset -10px 0 0 #091716"></i><i style="box-shadow:inset -18px 0 0 #091716"></i><i style="box-shadow:inset -26px 0 0 #091716"></i></div>
+<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #081218"></i><i style="box-shadow:inset 18px 0 0 #081218"></i><i style="box-shadow:inset 10px 0 0 #081218"></i><i style="box-shadow:inset 4px 0 0 #081218"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #081218"></i><i style="box-shadow:inset -10px 0 0 #081218"></i><i style="box-shadow:inset -18px 0 0 #081218"></i><i style="box-shadow:inset -26px 0 0 #081218"></i></div>
 <section class="sec" id="readings" style="padding-top:30px">
   <div class="wash" style="width:460px;height:360px;right:-140px;top:280px;background:var(--rose)"></div>
   <svg class="orn astro spin" style="width:120px;left:2%;top:70px" aria-hidden="true"><use href="#astro-astrolabe"/></svg>
@@ -616,7 +616,7 @@ h1,h2{letter-spacing:-.012em}
     <div class="readings"><article class="reading card rv">
       <a class="cover" href="https://beyondthesymbol.gumroad.com/l/character-study" target="_blank" rel="noopener"><img src="assets/cover-character.jpg" alt="Character Study cover" loading="lazy"><span class="badge">31-page guide + one-tap reading</span></a>
       <div class="body">
-        <div class="title-row"><span class="icon-orb" style="--tint:#e6f7f5"><svg viewBox="0 0 40 40"><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="url(#gV)" opacity=".35"/><path d="M15 15q2-2 4 0M21 15q2-2 4 0M15 23q5 4 10 0" stroke="#6ab0a7" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="none" stroke="#80cec5" stroke-width="1.3"/><path d="M33 2c.3 2.6.8 4 4.5 4.5C33.8 7 33.3 8.4 33 11c-.3-2.6-.8-4-4.5-4.5C32.2 6 32.7 4.6 33 2z" fill="url(#gG)"/></svg></span><h3>Character Study</h3></div>
+        <div class="title-row"><span class="icon-orb" style="--tint:#e6f1f7"><svg viewBox="0 0 40 40"><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="url(#gV)" opacity=".35"/><path d="M15 15q2-2 4 0M21 15q2-2 4 0M15 23q5 4 10 0" stroke="#0e94dc" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M20 4c8 0 13 6 13 13 0 9-7 15-13 19C14 32 7 26 7 17 7 10 12 4 20 4z" fill="none" stroke="#33b0f2" stroke-width="1.3"/><path d="M33 2c.3 2.6.8 4 4.5 4.5C33.8 7 33.3 8.4 33 11c-.3-2.6-.8-4-4.5-4.5C32.2 6 32.7 4.6 33 2z" fill="url(#gG)"/></svg></span><h3>Character Study</h3></div>
         <p class="hook">The parts of you that never changed, however many Januarys you promised they would. Here is what they were built for.</p>
         <p class="more">Twelve chapters on what you are actually made of: what you reach for, what you refuse before the offer is finished, and the life your character has been quietly building all along.</p>
         <ul class="inside"><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A one-tap reading that writes twelve chapters about you</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A 31-page illustrated guide to every layer of it</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>Step-by-step help gathering your free charts</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A keepsake PDF of your finished portrait</li></ul>
@@ -625,7 +625,7 @@ h1,h2{letter-spacing:-.012em}
       </div></article><article class="reading card rv">
       <a class="cover" href="https://beyondthesymbol.gumroad.com/l/the-work" target="_blank" rel="noopener"><img src="assets/cover-money.jpg" alt="The Money Map cover" loading="lazy"><span class="badge">Eleven chapters on work + money</span></a>
       <div class="body">
-        <div class="title-row"><span class="icon-orb" style="--tint:#d7f8ec"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gG)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#80cec5" stroke-width="1.3"/><circle cx="20" cy="20" r="12" fill="none" stroke="#80cec5" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M20 6l3.5 14L20 34l-3.5-14z" fill="url(#gP)"/><path d="M20 6l3.5 14h-7z" fill="url(#gV)"/><circle cx="20" cy="20" r="2.2" fill="#fff" stroke="#80cec5"/></svg></span><h3>The Money Map</h3></div>
+        <div class="title-row"><span class="icon-orb" style="--tint:#d7eef8"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gG)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#33b0f2" stroke-width="1.3"/><circle cx="20" cy="20" r="12" fill="none" stroke="#33b0f2" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M20 6l3.5 14L20 34l-3.5-14z" fill="url(#gP)"/><path d="M20 6l3.5 14h-7z" fill="url(#gV)"/><circle cx="20" cy="20" r="2.2" fill="#fff" stroke="#33b0f2"/></svg></span><h3>The Money Map</h3></div>
         <p class="hook">There is a door your money was always meant to come through. You may have spent years knocking on a different one.</p>
         <p class="more">Where your work and your money actually live, read from your own chart. It never names a job title and never promises a sum. It shows you the shape of the work and the door it comes through.</p>
         <ul class="inside"><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A one-tap reading that writes eleven chapters</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>An illustrated guide to the rooms of your chart that carry the money</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>Step-by-step help gathering your free charts</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A keepsake PDF to come back to</li></ul>
@@ -634,7 +634,7 @@ h1,h2{letter-spacing:-.012em}
       </div></article><article class="reading card rv">
       <a class="cover" href="https://beyondthesymbol.gumroad.com/l/destiny" target="_blank" rel="noopener"><img src="assets/cover-destiny.jpg" alt="Destiny cover" loading="lazy"><span class="badge">Twelve chapters on why you’re here</span></a>
       <div class="body">
-        <div class="title-row"><span class="icon-orb" style="--tint:#e2f9f5"><svg viewBox="0 0 40 40"><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="url(#gS)" opacity=".35"/><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="none" stroke="#80cec5" stroke-width="1.4" stroke-linecap="round"/><path d="M16 35q2-7 4-10t4-10" stroke="#6ab0a7" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/><path d="M24 8c.3 2.4.8 3.6 4 4-3.2.4-3.7 1.6-4 4-.3-2.4-.8-3.6-4-4 3.2-.4 3.7-1.6 4-4z" fill="url(#gG)"/></svg></span><h3>Destiny</h3></div>
+        <div class="title-row"><span class="icon-orb" style="--tint:#e2f1f9"><svg viewBox="0 0 40 40"><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="url(#gS)" opacity=".35"/><path d="M9 35V17a11 11 0 0 1 22 0v18" fill="none" stroke="#33b0f2" stroke-width="1.4" stroke-linecap="round"/><path d="M16 35q2-7 4-10t4-10" stroke="#0e94dc" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/><path d="M24 8c.3 2.4.8 3.6 4 4-3.2.4-3.7 1.6-4 4-.3-2.4-.8-3.6-4-4 3.2-.4 3.7-1.6 4-4z" fill="url(#gG)"/></svg></span><h3>Destiny</h3></div>
         <p class="hook">The thing you are unreasonably good at is where you started. Your chart also knows where you were headed.</p>
         <p class="more">What you arrived already knowing, what you came here to learn, and the road between the two. For the question that comes back every time something ends.</p>
         <ul class="inside"><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A one-tap reading that writes twelve chapters</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A 27-page illustrated guide to every layer</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>Step-by-step help gathering your free charts</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A keepsake PDF of your reading</li></ul>
@@ -643,7 +643,7 @@ h1,h2{letter-spacing:-.012em}
       </div></article><article class="reading card rv">
       <a class="cover" href="https://beyondthesymbol.gumroad.com/l/beloved" target="_blank" rel="noopener"><img src="assets/cover-beloved.jpg" alt="Beloved cover" loading="lazy"><span class="badge">Two readings + 45-page guide</span></a>
       <div class="body">
-        <div class="title-row"><span class="icon-orb" style="--tint:#e3f6f6"><svg viewBox="0 0 40 40"><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="url(#gR)" opacity=".3"/><path d="M14 9a8 8 0 1 0 6 13A6.5 6.5 0 1 1 14 9z" fill="url(#gR)"/><path d="M26 9a8 8 0 1 1-6 13A6.5 6.5 0 1 0 26 9z" fill="url(#gV)"/><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="none" stroke="#80cec5" stroke-width="1.2"/></svg></span><h3>Beloved</h3></div>
+        <div class="title-row"><span class="icon-orb" style="--tint:#e3eff6"><svg viewBox="0 0 40 40"><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="url(#gR)" opacity=".3"/><path d="M14 9a8 8 0 1 0 6 13A6.5 6.5 0 1 1 14 9z" fill="url(#gR)"/><path d="M26 9a8 8 0 1 1-6 13A6.5 6.5 0 1 0 26 9z" fill="url(#gV)"/><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z" fill="none" stroke="#33b0f2" stroke-width="1.2"/></svg></span><h3>Beloved</h3></div>
         <p class="hook">Someone walks in and your whole body says <em>I know you</em>. This is how to read why.</p>
         <p class="more">The pull, the friction, the old thread you both feel, and what the two of you are for. Plus a love reading of your own: the pattern you keep meeting, and what the real thing would feel like for you.</p>
         <ul class="inside"><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>The Two of You: a reading of your connection from both charts</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>Beloved: eleven chapters on how you love, from your chart alone</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A 45-page illustrated guide, including how each sign loves</li><li><svg class="hat-ico" viewBox="0 0 32 32"><use href="#hat"/></svg>A keepsake PDF of both readings</li></ul>
@@ -664,12 +664,12 @@ h1,h2{letter-spacing:-.012em}
     </div>
     <div class="starters"><article class="starter card rv">
       <a class="thumb" href="https://beyondthesymbol.gumroad.com/l/ai-read-my-chart" target="_blank" rel="noopener"><img src="assets/cover-ai-read.jpg" alt="AI Read My Chart cover" loading="lazy"></a>
-      <div><span class="icon-orb" style="width:44px;height:44px;--tint:#e2f9f5"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gS)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#80cec5" stroke-width="1.3"/><path d="M8 20q12-11 24 0q-12 11-24 0z" fill="#fff" stroke="#6ab0a7" stroke-width="1.5"/><circle cx="20" cy="20" r="4.4" fill="url(#gV)"/><circle cx="21.5" cy="18.6" r="1.3" fill="#fff"/></svg></span>
+      <div><span class="icon-orb" style="width:44px;height:44px;--tint:#e2f1f9"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="url(#gS)" opacity=".3"/><circle cx="20" cy="20" r="15" fill="none" stroke="#33b0f2" stroke-width="1.3"/><path d="M8 20q12-11 24 0q-12 11-24 0z" fill="#fff" stroke="#0e94dc" stroke-width="1.5"/><circle cx="20" cy="20" r="4.4" fill="url(#gV)"/><circle cx="21.5" cy="18.6" r="1.3" fill="#fff"/></svg></span>
         <h3>AI Read My Chart</h3><p>Your whole birth chart, read properly, in about four minutes. Where to get your complete chart free, and the one prompt that turns it into a full written reading. A 14-page PDF.</p>
         <div class="foot"><span class="price">$5</span><a class="btn btn-primary" href="https://beyondthesymbol.gumroad.com/l/ai-read-my-chart" target="_blank" rel="noopener">Get it</a></div>
       </div></article><article class="starter card rv">
       <a class="thumb" href="https://beyondthesymbol.gumroad.com/l/ncflmm" target="_blank" rel="noopener"><img src="assets/cover-astrologer.jpg" alt="The Astrologer Within cover" loading="lazy"></a>
-      <div><span class="icon-orb" style="width:44px;height:44px;--tint:#e6f7f5"><svg viewBox="0 0 40 40"><path d="M5 31q15-6 30 0l-3 3H8z" fill="url(#gS)"/><path d="M11 30L21 5l8 25" fill="url(#gV)" opacity=".85"/><path d="M21 5c3 3 5 3 8 1" stroke="#84cac2" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M5 31q15-6 30 0" fill="none" stroke="#80cec5" stroke-width="1.1"/><path d="M18 20a4 4 0 1 0 4.5 5A3.2 3.2 0 1 1 18 20z" fill="#e3fcf9"/><path d="M25 13l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#fff"/></svg></span>
+      <div><span class="icon-orb" style="width:44px;height:44px;--tint:#e6f1f7"><svg viewBox="0 0 40 40"><path d="M5 31q15-6 30 0l-3 3H8z" fill="url(#gS)"/><path d="M11 30L21 5l8 25" fill="url(#gV)" opacity=".85"/><path d="M21 5c3 3 5 3 8 1" stroke="#2cadf2" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M5 31q15-6 30 0" fill="none" stroke="#33b0f2" stroke-width="1.1"/><path d="M18 20a4 4 0 1 0 4.5 5A3.2 3.2 0 1 1 18 20z" fill="#e3f3fc"/><path d="M25 13l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="#fff"/></svg></span>
         <h3>The Astrologer Within</h3><p>Turn the AI you already use into your own patient astrologer. A prompt system plus a 35-page beginner guide that teaches you to read your chart yourself, including the hidden layer most readings skip.</p>
         <div class="foot"><span class="price">$7</span><a class="btn btn-primary" href="https://beyondthesymbol.gumroad.com/l/ncflmm" target="_blank" rel="noopener">Get it</a></div>
       </div></article></div>
@@ -680,7 +680,7 @@ h1,h2{letter-spacing:-.012em}
         <h3>The whole 2026 sky, month by month</h3>
         <p>Every new moon, full moon, eclipse and retrograde of the year, in an interactive calendar for your phone or laptop. See the strange weeks coming before they arrive.</p>
         <div class="moons" aria-hidden="true">
-          <i style="box-shadow:inset 20px 0 0 #f1faf9"></i><i style="box-shadow:inset 13px 0 0 #f1faf9"></i><i style="box-shadow:inset 7px 0 0 #f1faf9"></i><i></i><i style="box-shadow:inset -7px 0 0 #f1faf9"></i><i style="box-shadow:inset -13px 0 0 #f1faf9"></i><i style="box-shadow:inset -20px 0 0 #f1faf9"></i>
+          <i style="box-shadow:inset 20px 0 0 #f1f7fa"></i><i style="box-shadow:inset 13px 0 0 #f1f7fa"></i><i style="box-shadow:inset 7px 0 0 #f1f7fa"></i><i></i><i style="box-shadow:inset -7px 0 0 #f1f7fa"></i><i style="box-shadow:inset -13px 0 0 #f1f7fa"></i><i style="box-shadow:inset -20px 0 0 #f1f7fa"></i>
         </div>
         <a class="btn btn-primary" href="https://beyondthesymbol.gumroad.com/l/trhvca" target="_blank" rel="noopener">Get the calendar free</a>
       </div>
@@ -690,7 +690,7 @@ h1,h2{letter-spacing:-.012em}
 </section>
 
 <!-- ================= HOW ================= -->
-<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #091716"></i><i style="box-shadow:inset 18px 0 0 #091716"></i><i style="box-shadow:inset 10px 0 0 #091716"></i><i style="box-shadow:inset 4px 0 0 #091716"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #091716"></i><i style="box-shadow:inset -10px 0 0 #091716"></i><i style="box-shadow:inset -18px 0 0 #091716"></i><i style="box-shadow:inset -26px 0 0 #091716"></i></div>
+<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #081218"></i><i style="box-shadow:inset 18px 0 0 #081218"></i><i style="box-shadow:inset 10px 0 0 #081218"></i><i style="box-shadow:inset 4px 0 0 #081218"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #081218"></i><i style="box-shadow:inset -10px 0 0 #081218"></i><i style="box-shadow:inset -18px 0 0 #081218"></i><i style="box-shadow:inset -26px 0 0 #081218"></i></div>
 <section class="sec" id="how">
   <div class="wash" style="width:380px;height:300px;left:-100px;top:60px;background:var(--lilac)"></div>
   <div class="wrap">
@@ -700,13 +700,13 @@ h1,h2{letter-spacing:-.012em}
     </div>
     <div class="steps">
       <div class="step card rv"><span class="n">i</span>
-        <div class="icon-orb" style="--tint:#e3f6f6"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="url(#gP)" opacity=".3"/><circle cx="24" cy="24" r="17" fill="none" stroke="#80cec5" stroke-width="1.4"/><circle cx="24" cy="24" r="10" fill="none" stroke="#80cec5" stroke-width="1.2" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M24 7v34M7 24h34" stroke="#80cec5" stroke-width=".9" opacity=".7"/><circle cx="31" cy="15" r="3.4" fill="url(#gV)"/><circle cx="14" cy="30" r="2.6" fill="url(#gS)"/></svg></div>
+        <div class="icon-orb" style="--tint:#e3eff6"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="url(#gP)" opacity=".3"/><circle cx="24" cy="24" r="17" fill="none" stroke="#33b0f2" stroke-width="1.4"/><circle cx="24" cy="24" r="10" fill="none" stroke="#33b0f2" stroke-width="1.2" stroke-dasharray="1 3" stroke-linecap="round"/><path d="M24 7v34M7 24h34" stroke="#33b0f2" stroke-width=".9" opacity=".7"/><circle cx="31" cy="15" r="3.4" fill="url(#gV)"/><circle cx="14" cy="30" r="2.6" fill="url(#gS)"/></svg></div>
         <h3>Gather your charts</h3><p>The guide walks you to free chart sites, step by step. None of them ask for an account or an email address.</p></div>
       <div class="step card rv"><span class="n">ii</span>
-        <div class="icon-orb" style="--tint:#e4f6f4"><svg viewBox="0 0 48 48"><rect x="8" y="15" width="32" height="18" rx="9" fill="url(#gV)"/><path d="M20 24h8M25 20.5l3.5 3.5-3.5 3.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 4c.4 3.4 1 5.2 6 6-5 .8-5.6 2.6-6 6-.4-3.4-1-5.2-6-6 5-.8 5.6-2.6 6-6z" fill="url(#gG)"/></svg></div>
+        <div class="icon-orb" style="--tint:#e4f0f6"><svg viewBox="0 0 48 48"><rect x="8" y="15" width="32" height="18" rx="9" fill="url(#gV)"/><path d="M20 24h8M25 20.5l3.5 3.5-3.5 3.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 4c.4 3.4 1 5.2 6 6-5 .8-5.6 2.6-6 6-.4-3.4-1-5.2-6-6 5-.8 5.6-2.6 6-6z" fill="url(#gG)"/></svg></div>
         <h3>Press one button</h3><p>It opens your AI with the whole reading already loaded. Paste your charts. There is nothing to write and nothing to figure out.</p></div>
       <div class="step card rv"><span class="n">iii</span>
-        <div class="icon-orb" style="--tint:#e2f9f5"><svg viewBox="0 0 48 48"><path d="M24 13c-5-4-12-4-16-2v26c4-2 11-2 16 2 5-4 12-4 16-2V11c-4-2-11-2-16 2z" fill="url(#gS)" opacity=".35"/><path d="M24 13c-5-4-12-4-16-2v26c4-2 11-2 16 2 5-4 12-4 16-2V11c-4-2-11-2-16 2zM24 13v26" fill="none" stroke="#80cec5" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 19h7M12 24h7M29 19h7M29 24h5" stroke="#7ac6bd" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="icon-orb" style="--tint:#e2f1f9"><svg viewBox="0 0 48 48"><path d="M24 13c-5-4-12-4-16-2v26c4-2 11-2 16 2 5-4 12-4 16-2V11c-4-2-11-2-16 2z" fill="url(#gS)" opacity=".35"/><path d="M24 13c-5-4-12-4-16-2v26c4-2 11-2 16 2 5-4 12-4 16-2V11c-4-2-11-2-16 2zM24 13v26" fill="none" stroke="#33b0f2" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 19h7M12 24h7M29 19h7M29 24h5" stroke="#20a8f1" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <h3>Read about yourself</h3><p>Chapter after chapter about you, explained in plain language. One more tap lays it out as a keepsake PDF for your phone or printer.</p></div>
     </div>
   </div>
@@ -724,29 +724,29 @@ h1,h2{letter-spacing:-.012em}
     <svg class="venn rv" viewBox="0 0 400 390" role="img" aria-label="Three overlapping watercolor circles labelled Astrology, Human Design and Gene Keys, meeting at a gold centre labelled you">
       <defs>
         <filter id="wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="14"/><feGaussianBlur stdDeviation="1.2"/></filter>
-        <radialGradient id="wcB" r=".6"><stop offset=".55" stop-color="#a8e3d9" stop-opacity=".55"/><stop offset="1" stop-color="#8de2d6" stop-opacity=".75"/></radialGradient>
-        <radialGradient id="wcL" r=".6"><stop offset=".55" stop-color="#aadad6" stop-opacity=".55"/><stop offset="1" stop-color="#7dc2ba" stop-opacity=".75"/></radialGradient>
-        <radialGradient id="wcR" r=".6"><stop offset=".55" stop-color="#c0edec" stop-opacity=".55"/><stop offset="1" stop-color="#88cbc9" stop-opacity=".72"/></radialGradient>
+        <radialGradient id="wcB" r=".6"><stop offset=".55" stop-color="#66c5f5" stop-opacity=".55"/><stop offset="1" stop-color="#5dc0f5" stop-opacity=".75"/></radialGradient>
+        <radialGradient id="wcL" r=".6"><stop offset=".55" stop-color="#5bbef5" stop-opacity=".55"/><stop offset="1" stop-color="#18a5f0" stop-opacity=".75"/></radialGradient>
+        <radialGradient id="wcR" r=".6"><stop offset=".55" stop-color="#86cef7" stop-opacity=".55"/><stop offset="1" stop-color="#36aef2" stop-opacity=".72"/></radialGradient>
       </defs>
       <g filter="url(#wc)" style="mix-blend-mode:multiply">
         <circle class="ring" cx="200" cy="140" r="105" fill="url(#wcL)"/>
         <circle class="ring" cx="140" cy="242" r="105" fill="url(#wcR)"/>
         <circle class="ring" cx="260" cy="242" r="105" fill="url(#wcB)"/>
       </g>
-      <circle cx="200" cy="140" r="105" fill="none" stroke="#80cec5" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
-      <circle cx="140" cy="242" r="105" fill="none" stroke="#80cec5" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
-      <circle cx="260" cy="242" r="105" fill="none" stroke="#80cec5" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
+      <circle cx="200" cy="140" r="105" fill="none" stroke="#33b0f2" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
+      <circle cx="140" cy="242" r="105" fill="none" stroke="#33b0f2" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
+      <circle cx="260" cy="242" r="105" fill="none" stroke="#33b0f2" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
       <use href="#astro-sun" x="172" y="178" width="56" height="56"/>
-      <text x="200" y="256" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" font-style="italic" fill="#e9fffc">you</text>
-      <text x="200" y="86" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Astrology</text>
-      <text x="104" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Human Design</text>
-      <text x="296" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Gene Keys</text>
+      <text x="200" y="256" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" font-style="italic" fill="#e9f7ff">you</text>
+      <text x="200" y="86" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9f7ff">Astrology</text>
+      <text x="104" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9f7ff">Human Design</text>
+      <text x="296" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9f7ff">Gene Keys</text>
     </svg>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
-<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #091716"></i><i style="box-shadow:inset 18px 0 0 #091716"></i><i style="box-shadow:inset 10px 0 0 #091716"></i><i style="box-shadow:inset 4px 0 0 #091716"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #091716"></i><i style="box-shadow:inset -10px 0 0 #091716"></i><i style="box-shadow:inset -18px 0 0 #091716"></i><i style="box-shadow:inset -26px 0 0 #091716"></i></div>
+<div class="phases rv" aria-hidden="true"><i style="box-shadow:inset 26px 0 0 #081218"></i><i style="box-shadow:inset 18px 0 0 #081218"></i><i style="box-shadow:inset 10px 0 0 #081218"></i><i style="box-shadow:inset 4px 0 0 #081218"></i><i class="full"></i><i style="box-shadow:inset -4px 0 0 #081218"></i><i style="box-shadow:inset -10px 0 0 #081218"></i><i style="box-shadow:inset -18px 0 0 #081218"></i><i style="box-shadow:inset -26px 0 0 #081218"></i></div>
 <section class="sec" id="faq" style="padding-top:30px">
   <div class="wash" style="width:400px;height:300px;right:-120px;top:100px;background:var(--sky)"></div>
   <div class="wrap">
@@ -754,7 +754,7 @@ h1,h2{letter-spacing:-.012em}
       <span class="eyebrow"><svg class="hat-ico"><use href="#hat"/></svg> Questions</span>
       <h2>Before you <em>open the door</em></h2>
     </div>
-    <div class="faq"><details class="card rv"><summary>Do I need to know any astrology?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>None at all. Every guide starts from the very beginning and explains each term the first time it appears, then what it means for you.</p></details><details class="card rv"><summary>Which AI do I need?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>ChatGPT, Claude or Gemini. The free versions are enough.</p></details><details class="card rv"><summary>Do I need my exact birth time?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>The readings are richest with an exact time, and they still work without one. The guide shows you what changes.</p></details><details class="card rv"><summary>Will I have to sign up anywhere?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>No. The chart sites the guides send you to never ask for an account or an email address.</p></details><details class="card rv"><summary>How fast do I get it?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>Straight away. Everything downloads the moment your purchase goes through.</p></details><details class="card rv"><summary>Which one should I start with?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#80cec5" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>Follow the question that has been bothering you most. If you only want to dip a toe in, AI Read My Chart is $5 and takes about four minutes.</p></details></div>
+    <div class="faq"><details class="card rv"><summary>Do I need to know any astrology?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>None at all. Every guide starts from the very beginning and explains each term the first time it appears, then what it means for you.</p></details><details class="card rv"><summary>Which AI do I need?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>ChatGPT, Claude or Gemini. The free versions are enough.</p></details><details class="card rv"><summary>Do I need my exact birth time?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>The readings are richest with an exact time, and they still work without one. The guide shows you what changes.</p></details><details class="card rv"><summary>Will I have to sign up anywhere?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>No. The chart sites the guides send you to never ask for an account or an email address.</p></details><details class="card rv"><summary>How fast do I get it?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>Straight away. Everything downloads the moment your purchase goes through.</p></details><details class="card rv"><summary>Which one should I start with?<span class="pm"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="#33b0f2" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary><p>Follow the question that has been bothering you most. If you only want to dip a toe in, AI Read My Chart is $5 and takes about four minutes.</p></details></div>
   </div>
 </section>
 
@@ -815,31 +815,31 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
   function band(){
     const c=document.createElement('canvas');c.width=1400;c.height=700;const b=c.getContext('2d');
     b.translate(700,350);b.rotate(-.42);b.globalCompositeOperation='lighter';
-    const cols=['87,233,216','255,120,180','90,255,229','240,110,170'];
+    const cols=['95,193,245','255,120,180','122,209,255','240,110,170'];
     for(let i=0;i<120;i++){const x=rnd(-760,760),y=rnd(-1,1)*rnd(10,90),r=rnd(40,140),col=cols[i%4];
       const gr=b.createRadialGradient(x,y,0,x,y,r);gr.addColorStop(0,`rgba(${col},.07)`);gr.addColorStop(1,`rgba(${col},0)`);b.fillStyle=gr;b.fillRect(x-r,y-r,2*r,2*r);}
     for(let i=0;i<2600;i++){const x=rnd(-760,760),y=(Math.random()+Math.random()+Math.random()-1.5)*70,a=rnd(.15,.8);
       b.fillStyle=`rgba(255,255,255,${a})`;b.fillRect(x,y,rnd(.6,1.6),rnd(.6,1.6));}
-    for(let i=0;i<40;i++){const x=rnd(-700,700),y=rnd(-12,12);b.fillStyle='rgba(5,13,13,.18)';b.beginPath();b.ellipse(x,y,rnd(30,90),rnd(4,10),0,0,7);b.fill();}
+    for(let i=0;i<40;i++){const x=rnd(-700,700),y=rnd(-12,12);b.fillStyle='rgba(5,10,13,.18)';b.beginPath();b.ellipse(x,y,rnd(30,90),rnd(4,10),0,0,7);b.fill();}
     return c;
   }
   /* a small spiral galaxy that slowly turns */
   function spiral(){
     const c=document.createElement('canvas');c.width=c.height=420;const b=c.getContext('2d');b.translate(210,210);b.globalCompositeOperation='lighter';
-    const core=b.createRadialGradient(0,0,0,0,0,70);core.addColorStop(0,'rgba(236,255,254,.9)');core.addColorStop(.3,'rgba(170,255,247,.35)');core.addColorStop(1,'rgba(110,255,238,0)');
+    const core=b.createRadialGradient(0,0,0,0,0,70);core.addColorStop(0,'rgba(236,248,255,.9)');core.addColorStop(.3,'rgba(145,216,255,.35)');core.addColorStop(1,'rgba(128,211,255,0)');
     b.fillStyle=core;b.fillRect(-90,-90,180,180);
     for(let arm=0;arm<2;arm++)for(let i=0;i<900;i++){
       const t=Math.random()*4.2,r=12+t*44,a=t*1.15+arm*Math.PI+rnd(-.25,.25),x=Math.cos(a)*r*rnd(.92,1.08),y=Math.sin(a)*r*rnd(.92,1.08);
-      const col=Math.random()<.5?'180,255,246':(Math.random()<.5?'180,255,252':'170,255,241');
+      const col=Math.random()<.5?'147,217,255':(Math.random()<.5?'150,217,255':'141,216,255');
       b.fillStyle=`rgba(${col},${rnd(.15,.7)*(1-t/5)})`;b.fillRect(x,y,rnd(.8,2.2),rnd(.8,2.2));}
     return c;
   }
   /* planets: shaded spheres whose bands drift, so they look like they spin */
   const PLANETS=[
-    {fx:.9,fy:.2,r:46,depth:.08,cols:['#a2fff4','#6ce3d5','#c7fff9','#54ccbe'],ring:true,spin:9,orbit:{rx:30,ry:14,sp:.05}},
+    {fx:.9,fy:.2,r:46,depth:.08,cols:['#8dd7ff','#57bef4','#c7ebff','#22a9f1'],ring:true,spin:9,orbit:{rx:30,ry:14,sp:.05}},
     {fx:.07,fy:.62,r:30,depth:.14,cols:['#ffb3d6','#f27aae','#ffe0ee','#c9568c'],ring:false,spin:7,orbit:{rx:22,ry:10,sp:-.07}},
-    {fx:.78,fy:.86,r:18,depth:.2,cols:['#a9fff0','#6cebd6','#d6fff8','#57cbb8'],ring:false,spin:5,orbit:{rx:40,ry:16,sp:.09}},
-    {fx:.32,fy:.12,r:9,depth:.05,cols:['#c4ffe9','#87f3ca','#e0fff3','#67dbae'],ring:false,spin:4,orbit:{rx:16,ry:8,sp:.12}},
+    {fx:.78,fy:.86,r:18,depth:.2,cols:['#8dd8ff','#64c4f5','#d6f1ff','#1ca8f1'],ring:false,spin:5,orbit:{rx:40,ry:16,sp:.09}},
+    {fx:.32,fy:.12,r:9,depth:.05,cols:['#c4edff','#6dccf6','#e0f5ff','#31b7f2'],ring:false,spin:4,orbit:{rx:16,ry:8,sp:.12}},
   ];
   PLANETS.forEach(p=>{const c=document.createElement('canvas');c.width=256;c.height=128;const b=c.getContext('2d');
     b.fillStyle=p.cols[0];b.fillRect(0,0,256,128);
@@ -853,18 +853,18 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
     const n=Math.round(W*H/1500);stars=[];
     for(let i=0;i<n;i++){const layer=Math.random();stars.push({x:Math.random()*W,y:Math.random()*H*3,
       r:layer>.94?rnd(1.1,1.8):layer>.7?rnd(.7,1.1):rnd(.3,.7),d:layer>.94?.5:layer>.7?.28:.12,
-      a:rnd(.35,1),tw:rnd(.6,2.4),ph:rnd(0,7),c:Math.random()<.12?'190,255,247':Math.random()<.1?'215,255,254':Math.random()<.1?'200,255,246':'255,255,255'});}
+      a:rnd(.35,1),tw:rnd(.6,2.4),ph:rnd(0,7),c:Math.random()<.12?'190,232,255':Math.random()<.1?'215,241,255':Math.random()<.1?'200,236,255':'255,255,255'});}
   }
   function planet(p,x,y){
     g.save();
-    if(p.ring){g.strokeStyle='rgba(205,255,249,.35)';g.lineWidth=p.r*.09;g.beginPath();g.ellipse(x,y,p.r*1.9,p.r*.5,-.35,Math.PI,2*Math.PI);g.stroke();}
+    if(p.ring){g.strokeStyle='rgba(205,238,255,.35)';g.lineWidth=p.r*.09;g.beginPath();g.ellipse(x,y,p.r*1.9,p.r*.5,-.35,Math.PI,2*Math.PI);g.stroke();}
     g.beginPath();g.arc(x,y,p.r,0,7);g.clip();
     const off=(T*p.spin)%256;const s=p.r*2/128;
     g.drawImage(p.tex,0,0,256,128,x-p.r-off*s,y-p.r,256*s,p.r*2);g.drawImage(p.tex,0,0,256,128,x-p.r-off*s+256*s,y-p.r,256*s,p.r*2);
-    const sh=g.createRadialGradient(x-p.r*.4,y-p.r*.45,p.r*.1,x,y,p.r*1.05);sh.addColorStop(0,'rgba(255,255,255,.35)');sh.addColorStop(.45,'rgba(255,255,255,0)');sh.addColorStop(1,'rgba(4,11,10,.78)');
+    const sh=g.createRadialGradient(x-p.r*.4,y-p.r*.45,p.r*.1,x,y,p.r*1.05);sh.addColorStop(0,'rgba(255,255,255,.35)');sh.addColorStop(.45,'rgba(255,255,255,0)');sh.addColorStop(1,'rgba(4,9,11,.78)');
     g.fillStyle=sh;g.fillRect(x-p.r,y-p.r,p.r*2,p.r*2);g.restore();
-    if(p.ring){g.strokeStyle='rgba(218,255,251,.45)';g.lineWidth=p.r*.09;g.beginPath();g.ellipse(x,y,p.r*1.9,p.r*.5,-.35,0,Math.PI);g.stroke();}
-    const halo=g.createRadialGradient(x,y,p.r*.9,x,y,p.r*1.7);halo.addColorStop(0,'rgba(160,255,244,.18)');halo.addColorStop(1,'rgba(160,255,244,0)');
+    if(p.ring){g.strokeStyle='rgba(218,242,255,.45)';g.lineWidth=p.r*.09;g.beginPath();g.ellipse(x,y,p.r*1.9,p.r*.5,-.35,0,Math.PI);g.stroke();}
+    const halo=g.createRadialGradient(x,y,p.r*.9,x,y,p.r*1.7);halo.addColorStop(0,'rgba(141,215,255,.18)');halo.addColorStop(1,'rgba(141,215,255,0)');
     g.fillStyle=halo;g.beginPath();g.arc(x,y,p.r*1.7,0,7);g.fill();
   }
   function draw(){
@@ -885,7 +885,7 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
     // falling stars
     for(let i=shoots.length-1;i>=0;i--){const sh=shoots[i];sh.t+=.016;const k=sh.t/sh.dur;if(k>=1){shoots.splice(i,1);continue;}
       const x=sh.x+sh.vx*k,y=sh.y+sh.vy*k,tx=x-sh.vx*sh.len,ty=y-sh.vy*sh.len,fade=Math.sin(Math.PI*k);
-      const tail=g.createLinearGradient(x,y,tx,ty);tail.addColorStop(0,`rgba(255,255,255,${fade})`);tail.addColorStop(.25,`rgba(255,170,210,${fade*.6})`);tail.addColorStop(1,'rgba(180,255,246,0)');
+      const tail=g.createLinearGradient(x,y,tx,ty);tail.addColorStop(0,`rgba(255,255,255,${fade})`);tail.addColorStop(.25,`rgba(255,170,210,${fade*.6})`);tail.addColorStop(1,'rgba(147,217,255,0)');
       g.strokeStyle=tail;g.lineWidth=sh.w;g.lineCap='round';g.beginPath();g.moveTo(x,y);g.lineTo(tx,ty);g.stroke();
       const head=g.createRadialGradient(x,y,0,x,y,sh.w*4);head.addColorStop(0,`rgba(255,255,255,${fade})`);head.addColorStop(1,'rgba(255,255,255,0)');
       g.fillStyle=head;g.beginPath();g.arc(x,y,sh.w*4,0,7);g.fill();}
@@ -914,11 +914,11 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
     for(const c of CON){const y0=c.y-sy*.35;if(y0<-c.size-40||y0>H+40)continue;
       const vis=.45+.55*(.5+.5*Math.sin(T*c.sp+c.ph));
       const P=c.pts.map(p=>[c.x+p[0]*c.size,y0+p[1]*c.size]);
-      g.strokeStyle=`rgba(198,255,248,${.38*vis})`;g.lineWidth=1;g.beginPath();
+      g.strokeStyle=`rgba(198,235,255,${.38*vis})`;g.lineWidth=1;g.beginPath();
       for(const [a,b] of c.edges){g.moveTo(P[a][0],P[a][1]);g.lineTo(P[b][0],P[b][1]);}g.stroke();
-      for(const [x,y] of P){const gl=g.createRadialGradient(x,y,0,x,y,7);gl.addColorStop(0,`rgba(255,255,255,${.95*vis})`);gl.addColorStop(1,'rgba(200,255,249,0)');
+      for(const [x,y] of P){const gl=g.createRadialGradient(x,y,0,x,y,7);gl.addColorStop(0,`rgba(255,255,255,${.95*vis})`);gl.addColorStop(1,'rgba(200,236,255,0)');
         g.fillStyle=gl;g.beginPath();g.arc(x,y,7,0,7);g.fill();g.fillStyle=`rgba(255,255,255,${vis})`;g.beginPath();g.arc(x,y,1.6,0,7);g.fill();}
-      g.fillStyle=`rgba(220,255,251,${.7*vis})`;g.font=`${W<600?16:20}px "Apple Symbols","Segoe UI Symbol",serif`;g.fillText(c.g+'︎',c.x-4,y0-14);
+      g.fillStyle=`rgba(220,243,255,${.7*vis})`;g.font=`${W<600?16:20}px "Apple Symbols","Segoe UI Symbol",serif`;g.fillText(c.g+'︎',c.x-4,y0-14);
     }
     g.restore();
   }
@@ -927,7 +927,7 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
   function placeRain(){RAIN=[];const n=W<600?22:46;for(let i=0;i<n;i++)RAIN.push(newDrop(true));}
   function newDrop(any){return {x:rnd(0,W),y:any?rnd(-H,H):rnd(-60,-10),v:rnd(18,55),sway:rnd(8,22),ph:rnd(0,7),r:rnd(2,5.5),rot:rnd(0,6),vr:rnd(-.8,.8)};}
   function sparkle(x,y,r,a,rot){g.save();g.translate(x,y);g.rotate(rot);g.globalAlpha=a;
-    const gl=g.createRadialGradient(0,0,0,0,0,r*2.4);gl.addColorStop(0,'rgba(255,255,255,.9)');gl.addColorStop(1,'rgba(190,255,248,0)');g.fillStyle=gl;g.beginPath();g.arc(0,0,r*2.4,0,7);g.fill();
+    const gl=g.createRadialGradient(0,0,0,0,0,r*2.4);gl.addColorStop(0,'rgba(255,255,255,.9)');gl.addColorStop(1,'rgba(190,232,255,0)');g.fillStyle=gl;g.beginPath();g.arc(0,0,r*2.4,0,7);g.fill();
     g.fillStyle='#fff';g.beginPath();g.moveTo(0,-r*2);g.quadraticCurveTo(r*.2,-r*.2,r*2,0);g.quadraticCurveTo(r*.2,r*.2,0,r*2);g.quadraticCurveTo(-r*.2,r*.2,-r*2,0);g.quadraticCurveTo(-r*.2,-r*.2,0,-r*2);g.fill();g.restore();}
   function rain(dt){for(let i=0;i<RAIN.length;i++){const d=RAIN[i];d.y+=d.v*dt;d.rot+=d.vr*dt;if(d.y>H+20){RAIN[i]=newDrop(false);continue;}
       const x=d.x+Math.sin(T*.6+d.ph)*d.sway,a=.45+.45*Math.sin(T*2.2+d.ph);sparkle(x,d.y,d.r,a,d.rot);}}
@@ -965,8 +965,8 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(36,1,.1,100);
 
-  scene.add(new THREE.HemisphereLight(0xf0fff9, 0xb7e9e4, 1.05));
-  const key = new THREE.DirectionalLight(0xe0fff4,.55); key.position.set(-4,8,6); scene.add(key);
+  scene.add(new THREE.HemisphereLight(0xf0faff, 0x79cbf6, 1.05));
+  const key = new THREE.DirectionalLight(0xe0f5ff,.55); key.position.set(-4,8,6); scene.add(key);
 
   const world = new THREE.Group(); scene.add(world);
   const wheel = new THREE.Group(); world.add(wheel);
@@ -986,18 +986,18 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
     g.globalAlpha=1; return tex(c);
   }
   /* --- gold coin for each sign --- */
-  const ELEM = {Fire:'rgba(158,232,231,', Earth:'rgba(159,201,189,', Air:'rgba(158,232,220,', Water:'rgba(158,222,215,'};
+  const ELEM = {Fire:'rgba(115,199,246,', Earth:'rgba(46,179,242,', Air:'rgba(108,199,246,', Water:'rgba(92,192,245,'};
   function coinTex(glyph, elem){
     const [c,g]=cnv(256);
-    g.shadowColor='rgba(58,142,131,.45)';g.shadowBlur=16;g.shadowOffsetY=6;
-    const gr=g.createLinearGradient(30,30,226,226);gr.addColorStop(0,'#16a89c');gr.addColorStop(.4,'#0f8a86');gr.addColorStop(.75,'#b85590');gr.addColorStop(1,'#e2689f');
+    g.shadowColor='rgba(11,117,173,.45)';g.shadowBlur=16;g.shadowOffsetY=6;
+    const gr=g.createLinearGradient(30,30,226,226);gr.addColorStop(0,'#0d88cb');gr.addColorStop(.4,'#0b70a8');gr.addColorStop(.75,'#b85590');gr.addColorStop(1,'#e2689f');
     g.fillStyle=gr;g.beginPath();g.arc(128,122,108,0,7);g.fill();g.shadowColor='transparent';
     const sh=g.createRadialGradient(92,78,4,110,100,110);sh.addColorStop(0,'rgba(255,255,255,.55)');sh.addColorStop(.5,'rgba(255,255,255,.08)');sh.addColorStop(1,'rgba(255,255,255,0)');
     g.fillStyle=sh;g.beginPath();g.arc(128,122,108,0,7);g.fill();
     g.strokeStyle='rgba(255,255,255,.9)';g.lineWidth=5;g.beginPath();g.arc(128,122,100,0,7);g.stroke();
     g.fillStyle='rgba(255,255,255,.75)';for(let a=0;a<48;a++){const t=a/48*Math.PI*2;g.beginPath();g.arc(128+Math.cos(t)*88,122+Math.sin(t)*88,1.8,0,7);g.fill();}
     g.textAlign='center';g.textBaseline='middle';g.font='112px "Apple Symbols","Segoe UI Symbol","Noto Sans Symbols 2","DejaVu Sans",serif';
-    g.shadowColor='rgba(28,112,101,.45)';g.shadowBlur=8;g.fillStyle='#ffffff';g.fillText(glyph+'\uFE0E',128,128);
+    g.shadowColor='rgba(9,91,134,.45)';g.shadowBlur=8;g.fillStyle='#ffffff';g.fillText(glyph+'\uFE0E',128,128);
     return tex(c);
   }
   function sparkTex(){
@@ -1009,26 +1009,26 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
   /* --- the sun: a gold medallion with a sleepy face --- */
   const sunTex=(()=>{const [c,g]=cnv(512);g.translate(256,256);
     for(let i=0;i<16;i++){g.save();g.rotate(i/16*Math.PI*2);const L=i%2?178:222;
-      const gr=g.createLinearGradient(0,0,0,-L);gr.addColorStop(0,'#b8e8e7');gr.addColorStop(1,'#e5fcfb');g.fillStyle=gr;
+      const gr=g.createLinearGradient(0,0,0,-L);gr.addColorStop(0,'#7bcaf7');gr.addColorStop(1,'#e5f4fc');g.fillStyle=gr;
       g.beginPath();g.moveTo(-26,-90);g.quadraticCurveTo(-8,-L*.7,0,-L);g.quadraticCurveTo(8,-L*.7,26,-90);g.fill();
-      g.strokeStyle='rgba(40,136,100,.55)';g.lineWidth=2;g.stroke();g.restore();}
-    const gr=g.createRadialGradient(-30,-36,10,0,0,120);gr.addColorStop(0,'#f5ffff');gr.addColorStop(.6,'#c3f1f0');gr.addColorStop(1,'#7dcac1');
-    g.fillStyle=gr;g.beginPath();g.arc(0,0,118,0,7);g.fill();g.strokeStyle='#5db2a9';g.lineWidth=4;g.stroke();
-    g.strokeStyle='#43988e';g.lineWidth=6;g.lineCap='round';
+      g.strokeStyle='rgba(10,110,155,.55)';g.lineWidth=2;g.stroke();g.restore();}
+    const gr=g.createRadialGradient(-30,-36,10,0,0,120);gr.addColorStop(0,'#f5fbff');gr.addColorStop(.6,'#8dd1f8');gr.addColorStop(1,'#29acf1');
+    g.fillStyle=gr;g.beginPath();g.arc(0,0,118,0,7);g.fill();g.strokeStyle='#0e95dd';g.lineWidth=4;g.stroke();
+    g.strokeStyle='#0c7eba';g.lineWidth=6;g.lineCap='round';
     g.beginPath();g.arc(-40,-6,18,.15*Math.PI,.85*Math.PI);g.stroke();g.beginPath();g.arc(40,-6,18,.15*Math.PI,.85*Math.PI);g.stroke();
     g.beginPath();g.arc(0,34,26,.2*Math.PI,.8*Math.PI);g.stroke();
-    g.fillStyle='rgba(138,227,227,.45)';g.beginPath();g.arc(-64,30,16,0,7);g.fill();g.beginPath();g.arc(64,30,16,0,7);g.fill();
+    g.fillStyle='rgba(102,193,245,.45)';g.beginPath();g.arc(-64,30,16,0,7);g.fill();g.beginPath();g.arc(64,30,16,0,7);g.fill();
     return tex(c);})();
   const sun=new THREE.Sprite(new THREE.SpriteMaterial({map:sunTex,transparent:true}));sun.scale.set(2.5,2.5,1);sun.position.y=.25;world.add(sun);
-  const sunGlow=new THREE.Sprite(new THREE.SpriteMaterial({map:softTex('228,255,254',.75),transparent:true,depthWrite:false}));sunGlow.scale.set(5,5,1);sunGlow.position.y=.2;sunGlow.renderOrder=-1;world.add(sunGlow);
+  const sunGlow=new THREE.Sprite(new THREE.SpriteMaterial({map:softTex('228,245,255',.75),transparent:true,depthWrite:false}));sunGlow.scale.set(5,5,1);sunGlow.position.y=.2;sunGlow.renderOrder=-1;world.add(sunGlow);
 
   /* --- the gold line wheel --- */
   const R=3.5;
-  const goldLine=new THREE.MeshBasicMaterial({color:0xd0fff9});
+  const goldLine=new THREE.MeshBasicMaterial({color:0xd0efff});
   const r1=new THREE.Mesh(new THREE.TorusGeometry(R+.6,.022,8,180),goldLine);r1.rotation.x=Math.PI/2;wheel.add(r1);
   const r2=new THREE.Mesh(new THREE.TorusGeometry(R-.6,.016,8,180),goldLine);r2.rotation.x=Math.PI/2;wheel.add(r2);
   const r3=new THREE.Mesh(new THREE.TorusGeometry(R+.78,.008,6,180),goldLine);r3.rotation.x=Math.PI/2;wheel.add(r3);
-  const washTex=(()=>{const [c,g]=cnv(512);const cols=['rgba(187,243,235,','rgba(255,170,205,','rgba(193,241,240,'];
+  const washTex=(()=>{const [c,g]=cnv(512);const cols=['rgba(138,210,248,','rgba(255,170,205,','rgba(141,209,248,'];
     for(let i=0;i<60;i++){const a=Math.random()*Math.PI*2,rr=150+Math.random()*90,x=256+Math.cos(a)*rr,y=256+Math.sin(a)*rr,s=30+Math.random()*50,col=cols[i%3];
       const gr=g.createRadialGradient(x,y,0,x,y,s);gr.addColorStop(0,col+'.35)');gr.addColorStop(1,col+'0)');g.fillStyle=gr;g.fillRect(0,0,512,512);}
     return tex(c);})();
@@ -1037,14 +1037,14 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
   for(let i=0;i<12;i++){const a=(i+.5)/12*Math.PI*2;const s=new THREE.Mesh(new THREE.BoxGeometry(1.2,.012,.012),goldLine);s.position.set(Math.cos(a)*R,0,Math.sin(a)*R);s.rotation.y=-a;wheel.add(s);}
   for(let i=0;i<72;i++){const a=i/72*Math.PI*2;const d=new THREE.Mesh(new THREE.SphereGeometry(i%6?.018:.035,6,6),goldLine);d.position.set(Math.cos(a)*(R+.69),0,Math.sin(a)*(R+.69));wheel.add(d);}
 
-  const shadowTex=softTex('98,162,154',.35);
+  const shadowTex=softTex('13,137,202',.35);
   const signs = SIGNS.map((s,i)=>{
     const g=new THREE.Group();
     const coin=new THREE.Sprite(new THREE.SpriteMaterial({map:coinTex(s[1],s[2]),transparent:true,depthWrite:false}));
     coin.scale.set(1.15,1.15,1);coin.position.y=.55;coin.userData.index=i;g.add(coin);
     const sh=new THREE.Mesh(new THREE.PlaneGeometry(.9,.9),new THREE.MeshBasicMaterial({map:shadowTex,transparent:true,depthWrite:false}));
     sh.rotation.x=-Math.PI/2;sh.position.y=.01;g.add(sh);
-    const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:softTex('220,255,251',.9),transparent:true,opacity:0,depthWrite:false}));
+    const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:softTex('220,243,255',.9),transparent:true,opacity:0,depthWrite:false}));
     halo.scale.set(2,2,1);halo.position.y=.5;g.add(halo);
     wheel.add(g);
     return {g,coin,sh,halo,i,slot:i,ang:0,r:R,y:0,spin:0,lift:0,scale:1};
@@ -1054,13 +1054,13 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
 
   /* --- watercolor planets --- */
   const PL=[
-    {n:'Moon',base:'#f8fffe',w:['#dbf7f3','#e6f7f6','#ffffff'],r:.26,o:1.55,sp:1.3},
-    {n:'Mercury',base:'#ccf7f1',w:['#a7f0e5','#c1f5ed','#e3fcf8'],r:.18,o:1.95,sp:1.05},
+    {n:'Moon',base:'#f8fdff',w:['#dbedf7','#e6f1f7','#ffffff'],r:.26,o:1.55,sp:1.3},
+    {n:'Mercury',base:'#cce8f7',w:['#7dcdf7','#8fd4f8','#e3f3fc'],r:.18,o:1.95,sp:1.05},
     {n:'Venus',base:'#ffd0e4',w:['#ff9cc8','#ffb8d6','#ffe4ef'],r:.3,o:2.35,sp:.8},
     {n:'Mars',base:'#ffb3d1',w:['#f27aae','#ff9cc4','#ffd0e2'],r:.24,o:2.75,sp:.62},
-    {n:'Jupiter',base:'#c5f3ee',w:['#9ae6dd','#b5efe9','#d5f1ef'],r:.52,o:5.0,sp:.28,bands:true},
-    {n:'Saturn',base:'#e2f2f2',w:['#c5e4e2','#d7eceb','#ccf3ef'],r:.42,o:5.9,sp:.2,ring:true},
-    {n:'Neptune',base:'#c5ebe3',w:['#a2ded2','#bbf3ea','#d5f1eb'],r:.34,o:6.7,sp:.14},
+    {n:'Jupiter',base:'#c5e3f3',w:['#69c5f5','#82cef7','#d5e7f1'],r:.52,o:5.0,sp:.28,bands:true},
+    {n:'Saturn',base:'#e2ecf2',w:['#77c9f6','#d7e4ec','#cce5f3'],r:.42,o:5.9,sp:.2,ring:true},
+    {n:'Neptune',base:'#7dcef7',w:['#59c0f4','#89d2f7','#d5e8f1'],r:.34,o:6.7,sp:.14},
   ];
   const planets=PL.map((p,i)=>{
     const m=new THREE.Mesh(new THREE.SphereGeometry(p.r,40,28),new THREE.MeshLambertMaterial({map:watercolor(p.base,p.w,p.bands)}));
@@ -1071,7 +1071,7 @@ const SIGNS = [["Aries", "\u2648", "Fire", "Mar 21 to Apr 19", "You started this
     }
     world.add(holder);
     const pts=[];for(let k=0;k<=160;k++){const a=k/160*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(a)*p.o,0,Math.sin(a)*p.o));}
-    const orbit=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineDashedMaterial({color:0xd0fff9,dashSize:.07,gapSize:.1,transparent:true,opacity:0}));
+    const orbit=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineDashedMaterial({color:0xd0efff,dashSize:.07,gapSize:.1,transparent:true,opacity:0}));
     orbit.computeLineDistances();world.add(orbit);
     return {...p,holder,mesh:m,orbit,a:Math.random()*Math.PI*2,emerge:0};
   });
