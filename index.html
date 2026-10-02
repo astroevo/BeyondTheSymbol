@@ -7,7 +7,7 @@
 <meta name="description" content="Readings of your own birth chart, Human Design and Gene Keys, written in plain language with the AI you already use." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f0f7f7;
@@ -26,8 +26,8 @@
   --gold-3:#4da59b;
   --line:rgba(118,198,189,.28);
   --shadow:0 24px 50px -24px rgba(69,121,116,.28), 0 6px 16px -10px rgba(69,121,116,.16);
-  --display:'Cormorant Garamond', Georgia, serif;
-  --body:'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display:'DM Serif Display', Georgia, serif;
+  --body:'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -382,6 +382,24 @@ body{color:var(--ink);background:radial-gradient(90% 60% at 70% 0%,#06252a 0%,tr
 .phases{display:flex;justify-content:center;gap:clamp(10px,2.2vw,22px);padding:26px 0 0;position:relative;z-index:1}
 .phases i{width:clamp(16px,2.2vw,24px);height:clamp(16px,2.2vw,24px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#ccfff9);box-shadow:inset 0 0 0 #091716}
 .phases i.full{box-shadow:0 0 18px 4px rgba(200,255,249,.65)}
+
+/* ================= READABLE TYPE: DM Serif Display + Outfit ================= */
+:root{--display:'DM Serif Display', Georgia, serif;--body:'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ink-2:rgba(229,255,252,.92);--ink-3:rgba(211,253,248,.72)}
+html{font-size:112.5%}
+@media (max-width:600px){html{font-size:106.25%}}
+body{line-height:1.65}
+h1,h2,h3,.q,.faq summary,.price,.ribbon-track,.step .n{font-weight:400}
+h1,h2{letter-spacing:-.012em}
+.hero h1{font-size:clamp(2.3rem,4.9vw,4.3rem);line-height:1.06}
+.head h2,.maps h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+.final h2{font-size:clamp(2rem,4vw,3.1rem)}
+.reading h3{font-size:2rem}.starter h3{font-size:1.6rem}.step h3{font-size:1.4rem}.answer h3{font-size:1.9rem}
+.reading .hook{font-size:1.15rem}.q{font-size:1.05rem}.faq summary{font-size:1.15rem}
+.eyebrow{font-size:.74rem}
+.trust{font-size:.86rem}
+.btn{font-weight:600;letter-spacing:.01em}
+@media (max-width:600px){.hero h1{font-size:2.35rem}.head h2,.maps h2{font-size:1.85rem}.reading h3{font-size:1.75rem}}
 </style>
 </head>
 <body>
@@ -719,10 +737,10 @@ body{color:var(--ink);background:radial-gradient(90% 60% at 70% 0%,#06252a 0%,tr
       <circle cx="140" cy="242" r="105" fill="none" stroke="#80cec5" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
       <circle cx="260" cy="242" r="105" fill="none" stroke="#80cec5" stroke-width=".8" stroke-dasharray="1 4" stroke-linecap="round"/>
       <use href="#astro-sun" x="172" y="178" width="56" height="56"/>
-      <text x="200" y="256" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#e9fffc">you</text>
-      <text x="200" y="86" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="21" font-weight="600" fill="#e9fffc">Astrology</text>
-      <text x="104" y="296" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="21" font-weight="600" fill="#e9fffc">Human Design</text>
-      <text x="296" y="296" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="21" font-weight="600" fill="#e9fffc">Gene Keys</text>
+      <text x="200" y="256" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" font-style="italic" fill="#e9fffc">you</text>
+      <text x="200" y="86" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Astrology</text>
+      <text x="104" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Human Design</text>
+      <text x="296" y="296" text-anchor="middle" font-family="DM Serif Display, serif" font-size="21" font-weight="600" fill="#e9fffc">Gene Keys</text>
     </svg>
   </div>
 </section>
